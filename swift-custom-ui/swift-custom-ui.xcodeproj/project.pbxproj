@@ -17,7 +17,7 @@
 		D85CA4241EC1920600F6942E /* InnoUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85CA41D1EC1920500F6942E /* InnoUI.framework */; };
 		D85CA4251EC1920600F6942E /* InnoUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D85CA41D1EC1920500F6942E /* InnoUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D85CA42B1EC1922B00F6942E /* InnoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA42A1EC1922B00F6942E /* InnoButton.swift */; };
-		D85CA42D1EC19A6E00F6942E /* InnoProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA42C1EC19A6E00F6942E /* InnoProgressView.swift */; };
+		D85CA42D1EC19A6E00F6942E /* InnoProgressViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA42C1EC19A6E00F6942E /* InnoProgressViewCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 		D85CA41F1EC1920600F6942E /* InnoUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InnoUI.h; sourceTree = "<group>"; };
 		D85CA4201EC1920600F6942E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D85CA42A1EC1922B00F6942E /* InnoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoButton.swift; sourceTree = "<group>"; };
-		D85CA42C1EC19A6E00F6942E /* InnoProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoProgressView.swift; sourceTree = "<group>"; };
+		D85CA42C1EC19A6E00F6942E /* InnoProgressViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoProgressViewCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 				D85CA41F1EC1920600F6942E /* InnoUI.h */,
 				D85CA4201EC1920600F6942E /* Info.plist */,
 				D85CA42A1EC1922B00F6942E /* InnoButton.swift */,
-				D85CA42C1EC19A6E00F6942E /* InnoProgressView.swift */,
+				D85CA42C1EC19A6E00F6942E /* InnoProgressViewCircle.swift */,
 				D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */,
 			);
 			path = InnoUI;
@@ -249,7 +249,7 @@
 			files = (
 				D82D5CFA1EC2E8AF0080B5AB /* InnoProgressViewBar.swift in Sources */,
 				D85CA42B1EC1922B00F6942E /* InnoButton.swift in Sources */,
-				D85CA42D1EC19A6E00F6942E /* InnoProgressView.swift in Sources */,
+				D85CA42D1EC19A6E00F6942E /* InnoProgressViewCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

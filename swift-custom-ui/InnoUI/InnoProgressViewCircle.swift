@@ -10,7 +10,7 @@ import UIKit
 
 
 
-@IBDesignable public class InnoProgressView: UIView {
+@IBDesignable public class InnoProgressViewCircle: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -20,8 +20,16 @@ import UIKit
     }
     */
 
-    @IBInspectable public var progressColor: UIColor = UIColor.orange
-    @IBInspectable public var progressDefaultColor: UIColor = UIColor.lightGray
+    @IBInspectable public var progressColor: UIColor = UIColor.orange{
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    @IBInspectable public var progressDefaultColor: UIColor = UIColor.lightGray{
+        didSet{
+            setNeedsDisplay()
+        }
+    }
     @IBInspectable public var progressWidth:CGFloat = 0.0
     @IBInspectable public var progress: CGFloat = 0.0{
         didSet{
@@ -64,19 +72,16 @@ import UIKit
         
         print("Progresss val.........",progressVal)
         progressCircleLayer.removeFromSuperlayer()
-
         let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
         let radius: CGFloat = max(bounds.width, bounds.height)
         let arcWidth: CGFloat = self.progressWidth//10
         let startAngle: CGFloat = 3 * 3.14/2// 3* π / 4
         let endAngle: CGFloat = startAngle + CGFloat(2 * 3.14 * progressVal)//π / 4
         let pCirclePath = UIBezierPath(arcCenter: center, radius: radius/2 - arcWidth/2,startAngle: startAngle,endAngle: endAngle,clockwise: true)
-    
         pCirclePath.lineWidth = arcWidth
         strokeColor.setStroke()
         pCirclePath.stroke()
         pCirclePath.close()
-        
         progressCircleLayer.path = pCirclePath.cgPath
         progressCircleLayer.fillColor = UIColor.clear.cgColor
         defaultCircleLayer.addSublayer(progressCircleLayer)
