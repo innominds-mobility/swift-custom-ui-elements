@@ -11,22 +11,22 @@ import InnoUI
 
 
 class ViewController: UIViewController {
-
+    // MARK: IBOutlet Properties
+    
+    /// The textfield for the progress Value.
     @IBOutlet weak var progressValTextFld: UITextField!
     
+    /// The view (subclass of progressBarView) for the progressViewBar.
     @IBOutlet weak var progressBarView: InnoProgressViewBar!
+    
+    /// The button for the show progress.
     @IBOutlet weak var showButton: InnoButton!
+    
+    /// The view (subclass of customProgressView) for the progressCircle.
     @IBOutlet weak var customProgressView: InnoProgressViewCircle!
     
-    @IBAction func showProgressButtonAction(_ sender: Any) {
-        view.endEditing(true)
-        if progressValTextFld.text != ""{
-            progressBarView.progressValue = CGFloat(Float(progressValTextFld.text!)!)//80
-            customProgressView.setNeedsDisplay()
-            customProgressView.progress = CGFloat(Float(progressValTextFld.text!)!)/100 // Value should be in decimals
-            
-        }        
-    }
+       // MARK: Default View Controller Methods
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -40,13 +40,35 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+     // MARK: Textfield delegate Methods
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
+    
+     // MARK: Tap gesture handle Method
+    
     func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+     // MARK: IBAction Methods
+    /**
+     It triggers changing of progress value. Shows progress value in circle and bar.
+ 
+     
+     */
+    @IBAction func showProgressButtonAction(_ sender: Any) {
+        view.endEditing(true)
+        if progressValTextFld.text != ""{
+            progressBarView.progressValue = CGFloat(Float(progressValTextFld.text!)!)
+            customProgressView.setNeedsDisplay()
+            customProgressView.progress = CGFloat(Float(progressValTextFld.text!)!)/100 // Value should be in decimals
+            
+        }
+    }
+
 
 }
 

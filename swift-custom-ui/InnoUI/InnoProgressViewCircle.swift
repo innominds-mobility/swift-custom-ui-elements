@@ -41,11 +41,16 @@ import UIKit
         self.drawDefaultCircleLayer()
         self.drawProgressCircleViewLayer(progressVal: self.progress, strokeColor: self.progressColor)
     }
-    // Drawing a circle with  Bezier path
+    // Drawing a circle with Bezier path
     
     var defaultCircleLayer : CAShapeLayer = CAShapeLayer()
     let progressCircleLayer : CAShapeLayer = CAShapeLayer()
     
+    // MARK: Drawing default circle layer method
+
+     /**
+        This method draws default circle layer on a bezier path and adds a stroke color to it.
+      */
     func drawDefaultCircleLayer(){
         let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
         let radius: CGFloat = max(bounds.width, bounds.height)
@@ -67,14 +72,18 @@ import UIKit
         defaultCircleLayer.strokeEnd = 0
         self.layer.addSublayer(defaultCircleLayer)
     }
+    // MARK: Drawing Progress circle layer Method
+    /** 
+     
+      This method draws/redraws progress circle layer on bezier path and adds a stroke color to it. This layer is added as a sublayer for 'defaultCircleLayer'. For every change in progress value, this method is called.
+     */
     
     func drawProgressCircleViewLayer(progressVal:CGFloat, strokeColor:UIColor){
         
-        print("Progresss val.........",progressVal)
         progressCircleLayer.removeFromSuperlayer()
         let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
         let radius: CGFloat = max(bounds.width, bounds.height)
-        let arcWidth: CGFloat = self.progressWidth//10
+        let arcWidth: CGFloat = self.progressWidth
         let startAngle: CGFloat = 3 * 3.14/2// 3* π / 4
         let endAngle: CGFloat = startAngle + CGFloat(2 * 3.14 * progressVal)//π / 4
         let pCirclePath = UIBezierPath(arcCenter: center, radius: radius/2 - arcWidth/2,startAngle: startAngle,endAngle: endAngle,clockwise: true)
