@@ -11,7 +11,7 @@ import InnoUI
 
 
 class ViewController: UIViewController {
-    // MARK: IBOutlet Properties
+    // MARK: - IBOutlet Properties
     
     /// The textfield for the progress Value.
     @IBOutlet weak var progressValTextFld: UITextField!
@@ -25,12 +25,13 @@ class ViewController: UIViewController {
     /// The view (subclass of customProgressView) for the progressCircle.
     @IBOutlet weak var customProgressView: InnoProgressViewCircle!
     
-       // MARK: Default View Controller Methods
+       // MARK: - Default View Controller Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        self.title = "Progress View"
+       
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-     // MARK: Textfield delegate Methods
+     // MARK: - Textfield delegate Methods
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
@@ -53,7 +54,7 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
-     // MARK: IBAction Methods
+     // MARK: - IBAction Methods
     /**
      It triggers changing of progress value. Shows progress value in circle and bar.
  
@@ -69,6 +70,18 @@ class ViewController: UIViewController {
         }
     }
 
+    /** 
+     It triggers range selection view controller
+     */
+    @IBAction func showRangeSliderButtonAction(_ sender: Any) {
+        
+        if let rangeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RangeSelectionViewController") as? RangeSelectionViewController {
+            if let navigator = navigationController {
+                navigator.pushViewController(rangeVC, animated: true)
+            }
+        }
+    
+    }
 
 }
 

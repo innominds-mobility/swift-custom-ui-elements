@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D82568411EC5AEB400676A0E /* RangeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */; };
 		D82D5CFA1EC2E8AF0080B5AB /* InnoProgressViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */; };
 		D85CA4071EC191E800F6942E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA4061EC191E800F6942E /* AppDelegate.swift */; };
 		D85CA4091EC191E800F6942E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA4081EC191E800F6942E /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 		D85CA4251EC1920600F6942E /* InnoUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D85CA41D1EC1920500F6942E /* InnoUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D85CA42B1EC1922B00F6942E /* InnoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA42A1EC1922B00F6942E /* InnoButton.swift */; };
 		D85CA42D1EC19A6E00F6942E /* InnoProgressViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA42C1EC19A6E00F6942E /* InnoProgressViewCircle.swift */; };
+		D865B76E1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D865B76D1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSelectionViewController.swift; sourceTree = "<group>"; };
 		D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoProgressViewBar.swift; sourceTree = "<group>"; };
 		D85CA4031EC191E800F6942E /* swift-custom-ui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-custom-ui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85CA4061EC191E800F6942E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		D85CA4201EC1920600F6942E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D85CA42A1EC1922B00F6942E /* InnoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoButton.swift; sourceTree = "<group>"; };
 		D85CA42C1EC19A6E00F6942E /* InnoProgressViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoProgressViewCircle.swift; sourceTree = "<group>"; };
+		D865B76D1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoRangeSelectionSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 			children = (
 				D85CA4061EC191E800F6942E /* AppDelegate.swift */,
 				D85CA4081EC191E800F6942E /* ViewController.swift */,
+				D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */,
 				D85CA40A1EC191E800F6942E /* Main.storyboard */,
 				D85CA40D1EC191E800F6942E /* Assets.xcassets */,
 				D85CA40F1EC191E800F6942E /* LaunchScreen.storyboard */,
@@ -118,6 +123,7 @@
 				D85CA42A1EC1922B00F6942E /* InnoButton.swift */,
 				D85CA42C1EC19A6E00F6942E /* InnoProgressViewCircle.swift */,
 				D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */,
+				D865B76D1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift */,
 			);
 			path = InnoUI;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			files = (
 				D85CA4091EC191E800F6942E /* ViewController.swift in Sources */,
 				D85CA4071EC191E800F6942E /* AppDelegate.swift in Sources */,
+				D82568411EC5AEB400676A0E /* RangeSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +257,7 @@
 				D82D5CFA1EC2E8AF0080B5AB /* InnoProgressViewBar.swift in Sources */,
 				D85CA42B1EC1922B00F6942E /* InnoButton.swift in Sources */,
 				D85CA42D1EC19A6E00F6942E /* InnoProgressViewCircle.swift in Sources */,
+				D865B76E1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

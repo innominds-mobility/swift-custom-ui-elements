@@ -37,7 +37,7 @@ Add an uiview IBoutlet from IB or can do by programetically create a uiview subc
 ```swift
 @IBOutlet weak var customProgressView: InnoProgressViewCircle!
 ```
-Progress value range is 0.0 to 1.0 cgfloat value. Here below progress value is converted to range 1-100. You can use any range as per your requirements, by convering properly. In this app, on click of `Show Progress`button `showProgressButtonAction` changes progress value. Text from `progressValTextFld` is taken to show the progress 
+Progress value range is 0.0 to 1.0 cgfloat value. Here below progress value is converted to range 1-100. You can use any range as per your requirements, by converting properly. In this app, on click of `Show Progress`button `showProgressButtonAction` changes progress value. Text from `progressValTextFld` is taken to show the progress 
 ```swift
 customProgressView.setNeedsDisplay()
 customProgressView.progress = CGFloat(Float(progressValTextFld.text!)!)/100
@@ -64,3 +64,37 @@ Progress bar value range is 1 to 100 cgfloat value. In this app, on click of `Sh
 ```swift
 progressBarView.progressValue = CGFloat(Float(progressValTextFld.text!)!)
 ```
+
+### Range selection slider
+#### Description
+`InnoRangeSelectionSlider` is a range selector control. It is used as a range selector. Highlighted color shows the selected range. InnoRangeSelectionSlider can customize properties like
+* Minimum value - It sets the minimum value that slider can move 
+* Maximum value - It sets the maximum value that slider can move
+* Lower value - It should be in between/equal Minimum and maximum values and less than higher value 
+* Higher value - It should be in between/equal Minimum and maximum values and greater than lower value
+* Track tint color 
+* Track Highlighting color
+* Indicator tint color
+* Curvaceousness - Defines the shape for indicator. It may be a circle or a square with corner radius. Values- 0.0 to 1.0
+
+#### Usage
+Add an uiview IBoutlet from IB or can do by programetically create a uiview by subclassing `InnoRangeSelectionSlider`.  
+```swift
+@IBOutlet weak var rangeSlider: InnoRangeSelectionSlider!
+```
+Can change the properties of `InnoRangeSelectionSlider` in IB directly to suit your requirements. For reading the values from Range selection slider, give valueChanged IBAction for it.
+```swift
+@IBAction func innoRangeSelectionSliderValueChanged(_ sender: Any) {
+self.getRangeSelectionText()
+}
+```
+Read the values from rangeSlider as shown below.
+```swift
+func getRangeSelectionText() {
+let lowVal = Int(rangeSlider.lowerValue)
+let highVal = Int(rangeSlider.upperValue)
+self.selectedValLbl.text = "Selected Range: \(lowVal) to \(highVal)"
+}
+```
+
+
