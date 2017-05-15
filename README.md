@@ -14,6 +14,13 @@ The following components are to be developed in UI for swift
 	* Spiral
 * UIImage with circular and squared
 
+To integrate swift-custom-ui-elements into your Xcode project manually
+add InnoUI module to your project.
+
+```swift
+import InnoUI
+```
+
 ### Rounded and corner type button 
 #### Description
 With `InnoButton`, you can directly give rounded corners to UIButton by subclassing it.
