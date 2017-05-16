@@ -17,11 +17,9 @@ import UIKit
         // Drawing code
     }
     */
-    
-    @IBInspectable public var cornerRadius : CGFloat = 0.0 {
-        didSet{
+    @IBInspectable public var cornerRadius: CGFloat = 0.0 {
+        didSet {
             self.layer.cornerRadius = cornerRadius
         }
     }
-    
 }

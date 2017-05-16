@@ -9,16 +9,15 @@
 import UIKit
 import InnoUI
 
-
 class RangeSelectionViewController: UIViewController {
     // MARK: - IBOutlet Properties
-    
+
     /// The InnoRangeSelectionSlider for the Range selection.
     @IBOutlet weak var rangeSlider: InnoRangeSelectionSlider!
-    
+
     /// The UiLabel for showing Selected value
     @IBOutlet weak var selectedValLbl: UILabel!
-    
+
     // MARK: - Default View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +30,7 @@ class RangeSelectionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     // MARK: - IBAction Methods
     /**
      It triggers capturing of range values and shows in label.
@@ -41,16 +40,16 @@ class RangeSelectionViewController: UIViewController {
     @IBAction func innoRangeSelectionSliderValueChanged(_ sender: Any) {
         self.getRangeSelectionText()
     }
-    //MARK:
+    // MARK: 
 
     // Method to show the value of range slider values
-    
+
     func getRangeSelectionText() {
         let lowVal = Int(rangeSlider.lowerValue)
         let highVal = Int(rangeSlider.upperValue)
         self.selectedValLbl.text = "Selected Range: \(lowVal) to \(highVal)"
     }
-    
+
     /*
     // MARK: - Navigation
 
