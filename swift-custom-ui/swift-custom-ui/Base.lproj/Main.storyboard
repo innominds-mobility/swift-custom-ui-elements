@@ -120,6 +120,9 @@
                                     <constraint firstAttribute="height" constant="30" id="pNy-QE-koB"/>
                                 </constraints>
                                 <state key="normal" title="Radiant background"/>
+                                <connections>
+                                    <action selector="gotoRadiantView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dHC-jr-Xd0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -222,6 +225,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdh-Qf-Ttt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1032.8" y="-25.637181409295355"/>
+        </scene>
+        <!--Radiant Background View Controller-->
+        <scene sceneID="TOe-Iu-DkX">
+            <objects>
+                <viewController storyboardIdentifier="RadiantBackgroundViewController" id="Jbi-v9-LM2" customClass="RadiantBackgroundViewController" customModule="swift_custom_ui" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X5S-4X-pSI"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Ul-fy-wel"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fRS-Cf-aE6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDc-dD-M9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821" y="93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZtK-B6-cfD">
