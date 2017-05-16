@@ -82,12 +82,12 @@ class ViewController: UIViewController {
         }
 
     }
-    
     /**
      It triggers Radiant background view
      */
     @IBAction func gotoRadiantView(_ sender: UIButton) {
-        if let rangeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RadiantBackgroundViewController") as? RadiantBackgroundViewController {
+        if let rangeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+            "RadiantBackgroundViewController") as? RadiantBackgroundViewController {
             if let navigator = navigationController {
                 navigator.pushViewController(rangeVC, animated: true)
             }
