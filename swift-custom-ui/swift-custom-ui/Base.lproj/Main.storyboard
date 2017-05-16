@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fWb-Is-K2l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fWb-Is-K2l">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,9 +22,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Progress Value (1-100)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-Z4-XLG">
-                                <rect key="frame" x="69" y="125" width="236" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Progress Value (1-100)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-Z4-XLG">
+                                <rect key="frame" x="69" y="122" width="236" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="5Bf-VV-NCr"/>
+                                    <constraint firstAttribute="height" constant="30" id="m8a-5l-k7j"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -31,17 +35,22 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="CXg-OV-TjF"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAs-Nh-lrv">
-                                <rect key="frame" x="0.0" y="67" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAs-Nh-lrv">
+                                <rect key="frame" x="0.0" y="67" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Xkk-dG-VpC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D6x-E1-n5T" customClass="InnoProgressViewCircle" customModule="InnoUI">
-                                <rect key="frame" x="87" y="257" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6x-E1-n5T" customClass="InnoProgressViewCircle" customModule="InnoUI">
+                                <rect key="frame" x="87" y="212" width="200" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="dX6-bC-RXv"/>
+                                    <constraint firstAttribute="width" constant="200" id="pdE-hd-Y21"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                         <real key="value" value="0.20000000000000001"/>
@@ -57,9 +66,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IYS-nL-Ra8" customClass="InnoProgressViewBar" customModule="InnoUI">
-                                <rect key="frame" x="29" y="472" width="317" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYS-nL-Ra8" customClass="InnoProgressViewBar" customModule="InnoUI">
+                                <rect key="frame" x="29" y="422" width="317" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gn4-3L-aL1"/>
+                                    <constraint firstAttribute="width" constant="317" id="k4x-Q3-Odq"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="barCornerRadius">
                                         <real key="value" value="7"/>
@@ -75,10 +87,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taN-OU-gRO" customClass="InnoButton" customModule="InnoUI">
-                                <rect key="frame" x="69" y="177" width="236" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taN-OU-gRO" customClass="InnoButton" customModule="InnoUI">
+                                <rect key="frame" x="69" y="162" width="236" height="40"/>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.41568627450980389" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DzT-lZ-bVb"/>
+                                    <constraint firstAttribute="width" constant="236" id="vo2-ig-EMV"/>
+                                </constraints>
                                 <state key="normal" title="Show Progress"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -89,16 +104,44 @@
                                     <action selector="showProgressButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q9t-cR-N0q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlF-KJ-Ev9">
-                                <rect key="frame" x="69" y="573" width="236" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlF-KJ-Ev9">
+                                <rect key="frame" x="20" y="480" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JyS-RV-LtM"/>
+                                </constraints>
                                 <state key="normal" title="Show RangeSlider"/>
                                 <connections>
                                     <action selector="showRangeSliderButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3m-xa-Rs3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOj-HD-dr0">
+                                <rect key="frame" x="20" y="520" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pNy-QE-koB"/>
+                                </constraints>
+                                <state key="normal" title="Radiant background"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BAs-Nh-lrv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="3" id="1zT-IS-b3y"/>
+                            <constraint firstItem="IYS-nL-Ra8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3pu-g5-dJi"/>
+                            <constraint firstAttribute="trailing" secondItem="BAs-Nh-lrv" secondAttribute="trailing" id="4CH-Ei-2ht"/>
+                            <constraint firstItem="LlF-KJ-Ev9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="7ak-7T-SHb"/>
+                            <constraint firstItem="ifU-Z4-XLG" firstAttribute="top" secondItem="BAs-Nh-lrv" secondAttribute="bottom" constant="10" id="Gjb-ba-lRS"/>
+                            <constraint firstItem="EOj-HD-dr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="Igb-Go-gpJ"/>
+                            <constraint firstItem="taN-OU-gRO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LNb-FX-iLg"/>
+                            <constraint firstItem="D6x-E1-n5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T5c-jg-BhT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LlF-KJ-Ev9" secondAttribute="trailing" constant="4" id="TQS-jg-uGU"/>
+                            <constraint firstItem="D6x-E1-n5T" firstAttribute="top" secondItem="taN-OU-gRO" secondAttribute="bottom" constant="10" id="TeW-2c-gEB"/>
+                            <constraint firstItem="BAs-Nh-lrv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bSn-Wh-bFU"/>
+                            <constraint firstItem="IYS-nL-Ra8" firstAttribute="top" secondItem="D6x-E1-n5T" secondAttribute="bottom" constant="10" id="e70-P6-hn8"/>
+                            <constraint firstItem="ifU-Z4-XLG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hgI-Vr-cXj"/>
+                            <constraint firstItem="LlF-KJ-Ev9" firstAttribute="top" secondItem="IYS-nL-Ra8" secondAttribute="bottom" constant="28" id="lfk-uX-Utk"/>
+                            <constraint firstItem="EOj-HD-dr0" firstAttribute="top" secondItem="LlF-KJ-Ev9" secondAttribute="bottom" constant="10" id="mrc-4J-QoO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EOj-HD-dr0" secondAttribute="trailing" constant="4" id="uD3-88-QrZ"/>
+                            <constraint firstItem="taN-OU-gRO" firstAttribute="top" secondItem="ifU-Z4-XLG" secondAttribute="bottom" constant="10" id="xCP-RJ-UIU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pNk-8E-udT"/>
                     <connections>
