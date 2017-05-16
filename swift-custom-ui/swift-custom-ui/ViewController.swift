@@ -86,10 +86,21 @@ class ViewController: UIViewController {
      It triggers Radiant background view
      */
     @IBAction func gotoRadiantView(_ sender: UIButton) {
-        if let rangeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+        if let radiantVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
             "RadiantBackgroundViewController") as? RadiantBackgroundViewController {
             if let navigator = navigationController {
-                navigator.pushViewController(rangeVC, animated: true)
+                navigator.pushViewController(radiantVC, animated: true)
+            }
+        }
+    }
+    /**
+     It triggers Custom Textfield
+     */
+    @IBAction func gotoCustomTextField(_ sender: UIButton) {
+        if let customTxtFldVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+            "BottomBorderTextFieldViewController") as? BottomBorderTextFieldViewController {
+            if let navigator = navigationController {
+                navigator.pushViewController(customTxtFldVC, animated: true)
             }
         }
     }
