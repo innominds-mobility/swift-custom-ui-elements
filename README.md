@@ -103,5 +103,23 @@ let highVal = Int(rangeSlider.upperValue)
 self.selectedValLbl.text = "Selected Range: \(lowVal) to \(highVal)"
 }
 ```
+### Toast message UI
+#### Description
+Toast message can be used to display information for the short period of time. A toast contains message to be displayed quickly and disappears after sometime. `UIView+InnoToastMessageUI` is an extension of UIView. Include this file in your project to get toast message.
+#### Usage
+To show toast message call `makeToast` on view OR window as per your requirements. 
+```swift
+view.makeToast(message: "Progress value is \(progressValTextFld.text!)")
+```
+OR get the UIWindow reference to show the toast in App. 
+```swift
+var currentWindow: UIWindow?
+currentWindow = UIApplication.shared.keyWindow
+
+currentWindow!.makeToast(message:
+"Progress value is \(progressValTextFld.text!)"
+)
+```
+
 
 
