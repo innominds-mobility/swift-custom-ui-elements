@@ -22,6 +22,7 @@
 		D85CA42B1EC1922B00F6942E /* InnoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA42A1EC1922B00F6942E /* InnoButton.swift */; };
 		D85CA42D1EC19A6E00F6942E /* InnoProgressViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA42C1EC19A6E00F6942E /* InnoProgressViewCircle.swift */; };
 		D865B76E1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D865B76D1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift */; };
+		D8683B081ECC4B030030E62E /* UIView+InnoToastMessageUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8683B071ECC4B030030E62E /* UIView+InnoToastMessageUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		D85CA42A1EC1922B00F6942E /* InnoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoButton.swift; sourceTree = "<group>"; };
 		D85CA42C1EC19A6E00F6942E /* InnoProgressViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoProgressViewCircle.swift; sourceTree = "<group>"; };
 		D865B76D1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoRangeSelectionSlider.swift; sourceTree = "<group>"; };
+		D8683B071ECC4B030030E62E /* UIView+InnoToastMessageUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+InnoToastMessageUI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +132,17 @@
 				D85CA42C1EC19A6E00F6942E /* InnoProgressViewCircle.swift */,
 				D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */,
 				D865B76D1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift */,
+				D8683B061ECC4B030030E62E /* ToastMessageUI */,
 			);
 			path = InnoUI;
+			sourceTree = "<group>";
+		};
+		D8683B061ECC4B030030E62E /* ToastMessageUI */ = {
+			isa = PBXGroup;
+			children = (
+				D8683B071ECC4B030030E62E /* UIView+InnoToastMessageUI.swift */,
+			);
+			path = ToastMessageUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +294,7 @@
 				D85CA42B1EC1922B00F6942E /* InnoButton.swift in Sources */,
 				D85CA42D1EC19A6E00F6942E /* InnoProgressViewCircle.swift in Sources */,
 				D865B76E1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift in Sources */,
+				D8683B081ECC4B030030E62E /* UIView+InnoToastMessageUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

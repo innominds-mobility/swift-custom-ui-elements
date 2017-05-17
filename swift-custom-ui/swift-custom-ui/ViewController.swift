@@ -23,9 +23,9 @@ class ViewController: UIViewController {
 
     /// The view (subclass of customProgressView) for the progressCircle.
     @IBOutlet weak var customProgressView: InnoProgressViewCircle!
-
+    ///Getting refernce for currnet view
+    var currentWindow: UIWindow?
        // MARK: - Default View Controller Methods
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
                     action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        currentWindow = UIApplication.shared.keyWindow
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,7 +58,6 @@ class ViewController: UIViewController {
      // MARK: - IBAction Methods
     /**
      It triggers changing of progress value. Shows progress value in circle and bar.
-     
      */
     @IBAction func showProgressButtonAction(_ sender: Any) {
         view.endEditing(true)
@@ -65,7 +65,10 @@ class ViewController: UIViewController {
             progressBarView.progressValue = CGFloat(Float(progressValTextFld.text!)!)
             customProgressView.setNeedsDisplay()
             customProgressView.progress = CGFloat(Float(progressValTextFld.text!)!)/100 // Value should be in decimals
-
+            // Getting toast message with progress value
+            currentWindow!.makeToast(message:
+                "Progress value is \(progressValTextFld.text!)"
+            )
         }
     }
 
