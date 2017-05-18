@@ -8,6 +8,8 @@
 
 import UIKit
 
+/// The purpose of this class is to provide custom view for showing progress in a circle.
+/// The `InnoProgressViewCircle` class is a subclass of the `UIView`.
 @IBDesignable public class InnoProgressViewCircle: UIView {
 
     /*
@@ -18,37 +20,41 @@ import UIKit
     }
     */
 
+    /// IBInspectable for Progress color of InnoProgressViewCircle
     @IBInspectable public var progressColor: UIColor = UIColor.orange {
         didSet {
             setNeedsDisplay()
         }
     }
+    /// IBInspectable for Progress default color of InnoProgressViewCircle
     @IBInspectable public var progressDefaultColor: UIColor = UIColor.lightGray {
         didSet {
             setNeedsDisplay()
         }
     }
+    /// IBInspectable for Progress width of InnoProgressViewCircle
     @IBInspectable public var progressWidth: CGFloat = 0.0
+    /// IBInspectable for Progress value of InnoProgressViewCircle
     @IBInspectable public var progress: CGFloat = 0.0 {
         didSet {
             self.drawProgressCircleViewLayer(progressVal:progress, strokeColor: self.progressColor)
         }
     }
+    /// Performing custom drawing for progress circle
+    ///
+    /// - Parameter rect: The portion of the view’s bounds that needs to be updated
     override public func draw(_ rect: CGRect) {
         // Add ARCs
         self.drawDefaultCircleLayer()
         self.drawProgressCircleViewLayer(progressVal: self.progress, strokeColor: self.progressColor)
     }
-    // Drawing a circle with Bezier path
-
+    /// Shape layer for default circle
     var defaultCircleLayer: CAShapeLayer = CAShapeLayer()
+    /// Shape layer for progress circle
     let progressCircleLayer: CAShapeLayer = CAShapeLayer()
 
     // MARK: Drawing default circle layer method
-
-     /**
-        This method draws default circle layer on a bezier path and adds a stroke color to it.
-      */
+    /// This method draws default circle layer on a bezier path and adds a stroke color to it.
     func drawDefaultCircleLayer() {
         let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
         let radius: CGFloat = max(bounds.width, bounds.height)
@@ -71,12 +77,13 @@ import UIKit
         self.layer.addSublayer(defaultCircleLayer)
     }
     // MARK: Drawing Progress circle layer Method
-    /**
-      This method draws/redraws progress circle layer on bezier path and adds a stroke color to it.
-     This layer is added as a sublayer for 'defaultCircleLayer'. 
-     For every change in progress value, this method is called.
-     */
-
+    /// This method draws/redraws progress circle layer on bezier path and adds a stroke color to it.
+    /// This layer is added as a sublayer for 'defaultCircleLayer'.
+    /// For every change in progress value, this method is called.
+    ///
+    /// - Parameters:
+    ///   - progressVal: Progress value for circle
+    ///   - strokeColor: color of circle
     func drawProgressCircleViewLayer(progressVal: CGFloat, strokeColor: UIColor) {
 
         progressCircleLayer.removeFromSuperlayer()

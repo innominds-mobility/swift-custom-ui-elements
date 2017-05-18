@@ -9,8 +9,9 @@
 import UIKit
 import InnoUI
 
-/// The purpose of this view controller is to provide a user interface for Rnage selection UI element.
-/// There's a matching scene in the *Main.storyboard* file, and in that scene there is Rnage selection object. Go to Interface Builder for details.
+/// The purpose of this view controller is to provide a user interface for Range selection UI element.
+/// There's a matching scene in the *Main.storyboard* file, and in that scene there is Rnage selection object. 
+/// Go to Interface Builder for details.
 /// The `RangeSelectionViewController` class is a subclass of the `UIViewController`.
 class RangeSelectionViewController: UIViewController {
     // MARK: - IBOutlet Properties

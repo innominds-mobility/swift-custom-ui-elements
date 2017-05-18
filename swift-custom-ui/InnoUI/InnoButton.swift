@@ -8,6 +8,8 @@
 
 import UIKit
 
+/// The purpose of this class is to provide custom button, with corner radius.
+/// The `InnoButton` class is a subclass of the `UIButton`.
 @IBDesignable public class InnoButton: UIButton {
 
     /*
@@ -17,6 +19,7 @@ import UIKit
         // Drawing code
     }
     */
+    /// IBInspectable for corner radius of InnoButton
     @IBInspectable public var cornerRadius: CGFloat = 0.0 {
         didSet {
             self.layer.cornerRadius = cornerRadius

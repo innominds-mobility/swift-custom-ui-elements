@@ -10,7 +10,8 @@ import UIKit
 import InnoUI
 
 /// The purpose of this view controller is to provide a user interface for Custom UI elements.
-/// There's a matching scene in the *Main.storyboard* file, and in that scene there are Custom UI elements. Go to Interface Builder for details.
+/// There's a matching scene in the *Main.storyboard* file, and in that scene there are Custom UI elements.
+/// Go to Interface Builder for details.
 /// The `ViewController` class is a subclass of the `UIViewController`.
 
 class ViewController: UIViewController {
@@ -47,7 +48,6 @@ class ViewController: UIViewController {
     }
 
      // MARK: - Textfield delegate Methods
-    
     /// UITextfield delegate method
     ///
     /// - Parameter textField: The text field whose return button was pressed.
@@ -105,7 +105,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
     /// It triggers Custom Textfield
     ///
     /// - Parameter sender: The button that invokes this IBAction method.
