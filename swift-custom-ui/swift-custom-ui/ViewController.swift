@@ -9,6 +9,10 @@
 import UIKit
 import InnoUI
 
+/// The purpose of this view controller is to provide a user interface for Custom UI elements.
+/// There's a matching scene in the *Main.storyboard* file, and in that scene there are Custom UI elements. Go to Interface Builder for details.
+/// The `ViewController` class is a subclass of the `UIViewController`.
+
 class ViewController: UIViewController {
     // MARK: - IBOutlet Properties
 
@@ -43,7 +47,11 @@ class ViewController: UIViewController {
     }
 
      // MARK: - Textfield delegate Methods
-
+    
+    /// UITextfield delegate method
+    ///
+    /// - Parameter textField: The text field whose return button was pressed.
+    /// - Returns: YES if the text field should implement its default behavior for the return button; otherwise, NO.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -51,14 +59,15 @@ class ViewController: UIViewController {
 
      // MARK: Tap gesture handle Method
 
+    /// Tap gesture handle Method
     func dismissKeyboard() {
         view.endEditing(true)
     }
 
      // MARK: - IBAction Methods
-    /**
-     It triggers changing of progress value. Shows progress value in circle and bar.
-     */
+    /// It triggers changing of progress value. Shows progress value in circle and bar.
+    ///
+    /// - Parameter sender: The button that invokes this IBAction method.
     @IBAction func showProgressButtonAction(_ sender: Any) {
         view.endEditing(true)
         if progressValTextFld.text != ""{
@@ -71,10 +80,9 @@ class ViewController: UIViewController {
             )
         }
     }
-
-    /** 
-     It triggers range selection view controller
-     */
+    /// It triggers range selection view controller
+    ///
+    /// - Parameter sender: The button that invokes this IBAction method.
     @IBAction func showRangeSliderButtonAction(_ sender: Any) {
 
         if let rangeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
@@ -85,9 +93,10 @@ class ViewController: UIViewController {
         }
 
     }
-    /**
-     It triggers Radiant background view
-     */
+
+    /// It triggers Radiant background view
+    ///
+    /// - Parameter sender: The button that invokes this IBAction method.
     @IBAction func gotoRadiantView(_ sender: UIButton) {
         if let radiantVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
             "RadiantBackgroundViewController") as? RadiantBackgroundViewController {
@@ -96,9 +105,10 @@ class ViewController: UIViewController {
             }
         }
     }
-    /**
-     It triggers Custom Textfield
-     */
+    
+    /// It triggers Custom Textfield
+    ///
+    /// - Parameter sender: The button that invokes this IBAction method.
     @IBAction func gotoCustomTextField(_ sender: UIButton) {
         if let customTxtFldVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
             "BottomBorderTextFieldViewController") as? BottomBorderTextFieldViewController {

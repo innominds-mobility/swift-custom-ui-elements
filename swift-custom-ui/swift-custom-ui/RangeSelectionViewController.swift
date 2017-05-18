@@ -9,6 +9,9 @@
 import UIKit
 import InnoUI
 
+/// The purpose of this view controller is to provide a user interface for Rnage selection UI element.
+/// There's a matching scene in the *Main.storyboard* file, and in that scene there is Rnage selection object. Go to Interface Builder for details.
+/// The `RangeSelectionViewController` class is a subclass of the `UIViewController`.
 class RangeSelectionViewController: UIViewController {
     // MARK: - IBOutlet Properties
 
@@ -32,32 +35,19 @@ class RangeSelectionViewController: UIViewController {
     }
 
     // MARK: - IBAction Methods
-    /**
-     It triggers capturing of range values and shows in label.
-     
-     */
 
+    /// It triggers capturing of range values and shows in label.
+    ///
+    /// - Parameter sender: The text field whose return button was pressed.
     @IBAction func innoRangeSelectionSliderValueChanged(_ sender: Any) {
         self.getRangeSelectionText()
     }
     // MARK: 
 
-    // Method to show the value of range slider values
-
+    /// Method to show the value of range slider values
     func getRangeSelectionText() {
         let lowVal = Int(rangeSlider.lowerValue)
         let highVal = Int(rangeSlider.upperValue)
         self.selectedValLbl.text = "Selected Range: \(lowVal) to \(highVal)"
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
