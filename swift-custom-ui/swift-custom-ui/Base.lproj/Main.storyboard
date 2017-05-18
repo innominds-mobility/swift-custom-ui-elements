@@ -212,7 +212,7 @@
                                         <color key="value" red="0.2156862745" green="0.46666666670000001" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackTintColor">
-                                        <color key="value" red="0.94509803920000002" green="0.96862745100000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -249,8 +249,32 @@
                     <view key="view" contentMode="scaleToFill" id="fRS-Cf-aE6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1o-D5-g3T" customClass="InnoRadiantBackground" customModule="InnoUI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" red="0.96839731929999995" green="0.66188257930000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" red="0.83137254900000002" green="0.086274509799999996" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="L1o-D5-g3T" secondAttribute="trailing" id="KC9-Qz-Tlx"/>
+                            <constraint firstItem="L1o-D5-g3T" firstAttribute="leading" secondItem="fRS-Cf-aE6" secondAttribute="leading" id="eXT-IJ-SPL"/>
+                            <constraint firstItem="L1o-D5-g3T" firstAttribute="top" secondItem="fRS-Cf-aE6" secondAttribute="top" id="lvc-9b-0Qf"/>
+                            <constraint firstItem="5Ul-fy-wel" firstAttribute="top" secondItem="L1o-D5-g3T" secondAttribute="bottom" id="sDt-qQ-xcf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="radiantView" destination="L1o-D5-g3T" id="jzI-6C-df7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDc-dD-M9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

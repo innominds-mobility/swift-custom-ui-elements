@@ -17,8 +17,12 @@ class BottomBorderTextFieldViewController: UIViewController, UITextFieldDelegate
         customizeTextField(textField: firstTextfld, borderWidth: 1, borderColor: UIColor.purple)
         customizeTextField(textField: secondTxtfld, borderWidth: 1, borderColor: UIColor.brown)
     }
-    /**
-     */
+    /// Draw bottom border to Textfield
+    ///
+    /// - Parameters:
+    ///   - textField: TextField reference ot customize
+    ///   - borderWidth: Border width
+    ///   - borderColor: border color
     func customizeTextField(textField: UITextField, borderWidth: CGFloat, borderColor: UIColor) {
         let border: CALayer = CALayer()
         border.borderColor = borderColor.cgColor

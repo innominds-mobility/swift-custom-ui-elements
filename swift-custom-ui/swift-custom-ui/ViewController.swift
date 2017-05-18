@@ -33,7 +33,6 @@ class ViewController: UIViewController {
        // MARK: - Default View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.title = "Progress View"
 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,

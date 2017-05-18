@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A4004B61ECD70950034A3AA /* InnoRadiantBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4004B51ECD70950034A3AA /* InnoRadiantBackground.swift */; };
 		9A5F23011ECAC953006248CD /* RadiantBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5F23001ECAC953006248CD /* RadiantBackgroundViewController.swift */; };
 		9A5F23051ECB1240006248CD /* BottomBorderTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5F23041ECB1240006248CD /* BottomBorderTextFieldViewController.swift */; };
 		D82568411EC5AEB400676A0E /* RangeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A4004B51ECD70950034A3AA /* InnoRadiantBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoRadiantBackground.swift; sourceTree = "<group>"; };
 		9A5F23001ECAC953006248CD /* RadiantBackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiantBackgroundViewController.swift; sourceTree = "<group>"; };
 		9A5F23041ECB1240006248CD /* BottomBorderTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextFieldViewController.swift; sourceTree = "<group>"; };
 		D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSelectionViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */,
 				D865B76D1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift */,
 				D8683B061ECC4B030030E62E /* ToastMessageUI */,
+				9A4004B51ECD70950034A3AA /* InnoRadiantBackground.swift */,
 			);
 			path = InnoUI;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				D85CA42D1EC19A6E00F6942E /* InnoProgressViewCircle.swift in Sources */,
 				D865B76E1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift in Sources */,
 				D8683B081ECC4B030030E62E /* UIView+InnoToastMessageUI.swift in Sources */,
+				9A4004B61ECD70950034A3AA /* InnoRadiantBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
