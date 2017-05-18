@@ -10,29 +10,49 @@ import UIKit
 
 // MARK: Toast Message UIview properties
 
+/// Toast Default position
 let toastPositionDefault  =   "bottom"
+/// Toast Top position
 let toastPositionTop      =   "top"
+/// Toast Center position
 let toastPositionCenter   =   "center"
+/// Toast Horizontal margin
 let toastHorizontalMargin: CGFloat  =   10.0
+/// Toats Vertical Margin
 let toastVerticalMargin: CGFloat  =   10.0
+/// Toast Default duration time
 let toastDefaultDuration  =   2.0
+/// Toast fading duration time
 let toastFadeDuration     =   0.2
+/// Toast Message font size
 let messageFontSize: CGFloat  = 19.0
 
 // Toast message label settings
+/// Toast view maximum width
 let toastMaxWidth: CGFloat  = 0.8;  //80% of ParentView width
+/// Toast view maximum height
 let toastMaxHeight: CGFloat  = 0.8
+/// Toast message maximum number of lines
 let toastMaxMessageLines     = 0
 // Toast shadow appearance
+/// Toast shadow opacity value
 let toastShadowOpacity: CGFloat   = 0.8
+/// Toast shadow radius
 let toastShadowRadius: CGFloat   = 6.0
+/// Toast shadow offset
 let toastShadowOffset: CGSize    = CGSize(width: CGFloat(4.0), height: CGFloat(4.0))
 
+/// Toast view opacity
 let toastOpacity: CGFloat   = 0.9
+/// Toast view corner radius
 let toastCornerRadius: CGFloat   = 8.0
+/// Toast timer
 var toastTimer: UnsafePointer<Timer>?
+/// Toast view
 var toastView: UnsafePointer<UIView>?
+/// Toast hides on tap
 let toastHidesOnTap       =   true
+/// Toast display shadow
 let toastDisplayShadow    =   true
 
 // MARK: - Toast Message UIView extension
@@ -43,6 +63,9 @@ let toastDisplayShadow    =   true
  */
 public extension UIView {
     // Making the toast message
+    /// Making a toast view
+    ///
+    /// - Parameter msg: Message to be displayed in toast
     func makeToast(message msg: String) {
         let toast = self.viewForMessage(msg)
         showToast(toast: toast!, duration: toastDefaultDuration, position: toastPositionDefault as AnyObject)
