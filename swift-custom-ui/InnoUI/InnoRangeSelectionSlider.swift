@@ -21,7 +21,7 @@ class RangeSelectionSliderTrackLayer: CALayer {
     ///
     /// - Parameter contex: The portion of the Layer context that needs to be updated.
     override func draw(in contex: CGContext) {
-        /// Checking for Range slider
+        /// Checking for Range slider.
         guard let slider = rangeSlider else {
             return
         }
@@ -132,14 +132,14 @@ class RangeSliderIndicatorLayer: CALayer {
             updateRangeSliderLayerFrames()
         }
     }
-    /// IBInspectable for Maximum value of InnoRangeSelectionSlider
+    /// IBInspectable for Maximum value of InnoRangeSelectionSlider.
     @IBInspectable public var maxValue: Double = 1.0 {
         didSet {
             updateRangeSliderLayerFrames()
         }
     }
 
-    /// IBInspectable for Lower value of InnoRangeSelectionSlider
+    /// IBInspectable for Lower value of InnoRangeSelectionSlider.
     @IBInspectable public var lowerValue: Double = 0.3 {
         didSet {
             if lowerValue < minValue {
@@ -149,7 +149,7 @@ class RangeSliderIndicatorLayer: CALayer {
         }
     }
 
-    /// IBInspectable for Upper value of InnoRangeSelectionSlider
+    /// IBInspectable for Upper value of InnoRangeSelectionSlider.
     @IBInspectable public var upperValue: Double = 0.9 {
         didSet {
             if upperValue > maxValue {
@@ -158,19 +158,19 @@ class RangeSliderIndicatorLayer: CALayer {
             updateRangeSliderLayerFrames()
         }
     }
-    /// Calculates gap between the indicators
+    /// Calculates gap between the indicators.
     var gapBetweenIndicators: Double {
         return 0.5 * Double(indicatorWidth) * (maxValue - minValue) / Double(bounds.width)
     }
 
-    /// IBInspectable for Track tint color of InnoRangeSelectionSlider
+    /// IBInspectable for Track tint color of InnoRangeSelectionSlider.
     @IBInspectable public var trackTintColor: UIColor = UIColor(white: 0.9, alpha: 1.0) {
         didSet {
             trackLayer.setNeedsDisplay()
         }
     }
 
-    /// IBInspectable for Track highlight color of InnoRangeSelectionSlider
+    /// IBInspectable for Track highlight color of InnoRangeSelectionSlider.
     @IBInspectable public var
     trackHighlightTintColor: UIColor = UIColor(red: 0.0, green: 0.45, blue: 0.94, alpha: 1.0) {
         didSet {
@@ -178,7 +178,7 @@ class RangeSliderIndicatorLayer: CALayer {
         }
     }
 
-    /// IBInspectable for Indicator tint color of InnoRangeSelectionSlider
+    /// IBInspectable for Indicator tint color of InnoRangeSelectionSlider.
     @IBInspectable public var indicatorTintColor: UIColor = UIColor.white {
         didSet {
             lowerIndicatorLayer.setNeedsDisplay()
@@ -202,29 +202,29 @@ class RangeSliderIndicatorLayer: CALayer {
         }
     }
 
-    /// Previous location point of indicator
+    /// Previous location point of indicator.
     fileprivate var previusLocPoint = CGPoint()
-    /// RangeSelectionSliderTrackLayer for track
+    /// RangeSelectionSliderTrackLayer for track.
     fileprivate let trackLayer = RangeSelectionSliderTrackLayer()
-    /// RangeSliderIndicatorLayer for Lower indicator
+    /// RangeSliderIndicatorLayer for Lower indicator.
     fileprivate let lowerIndicatorLayer = RangeSliderIndicatorLayer()
-    /// RangeSliderIndicatorLayer for Upper indicator
+    /// RangeSliderIndicatorLayer for Upper indicator.
     fileprivate let upperIndicatorLayer = RangeSliderIndicatorLayer()
 
-   /// Get Indicator width
+   /// Get Indicator width.
    fileprivate var indicatorWidth: CGFloat {
         return CGFloat(bounds.height)
     }
 
-    /// Updates Range Slider frame
+    /// Updates Range Slider frame.
     override public var frame: CGRect {
         didSet {
             updateRangeSliderLayerFrames()
         }
     }
-    /// Initializes and returns a newly allocated view object with the specified frame rectangle
+    /// Initializes and returns a newly allocated view object with the specified frame rectangle.
     ///
-    /// - Parameter frame: The frame rectangle for the view that needs to be initialised
+    /// - Parameter frame: The frame rectangle for the view that needs to be initialised.
     override public init(frame: CGRect) {
         super.init(frame: frame)
         initializeLayers()
@@ -239,7 +239,7 @@ class RangeSliderIndicatorLayer: CALayer {
         initializeLayers()
     }
 
-    /// Initializing Track layer, Lower Indicator layer, Upper Indicator layer
+    /// Initializing Track layer, Lower Indicator layer, Upper Indicator layer.
     fileprivate func initializeLayers() {
         lowerIndicatorLayer.rangeSlider = self
         upperIndicatorLayer.rangeSlider = self
@@ -258,7 +258,7 @@ class RangeSliderIndicatorLayer: CALayer {
     }
     /// Tells the layer to update its layout.
     ///
-    /// - Parameter ofLayer: The Layer that needs to be updated
+    /// - Parameter ofLayer: The Layer that needs to be updated.
     override public func layoutSublayers(of ofLayer: CALayer) {
         super.layoutSublayers(of:layer)
         updateRangeSliderLayerFrames()
@@ -266,7 +266,7 @@ class RangeSliderIndicatorLayer: CALayer {
 
     // MARK: Updating the UI for Range slider 
 
-    /// Updating the UI for Range slider
+    /// Updating the UI for Range slider.
     func updateRangeSliderLayerFrames() {
 
         CATransaction.begin()
@@ -275,7 +275,7 @@ class RangeSliderIndicatorLayer: CALayer {
         trackLayer.frame = bounds.insetBy(dx: 0.0, dy: bounds.height / 3)
         trackLayer.setNeedsDisplay()
 
-        /// Point for Lower Indicator center
+        /// Point for Lower Indicator center.
         let lowerIndicatorCenter = CGFloat(positionForValue(value: lowerValue))
 
         lowerIndicatorLayer.frame = CGRect(x: lowerIndicatorCenter - indicatorWidth / 2.0,
@@ -284,7 +284,7 @@ class RangeSliderIndicatorLayer: CALayer {
                                            height: indicatorWidth)
         lowerIndicatorLayer.setNeedsDisplay()
 
-        /// Point for Upper Indicator center
+        /// Point for Upper Indicator center.
         let upperIndicatorCenter = CGFloat(positionForValue(value: upperValue))
         upperIndicatorLayer.frame = CGRect(x: upperIndicatorCenter - indicatorWidth / 2.0,
                                            y: 0.0,
@@ -295,10 +295,10 @@ class RangeSliderIndicatorLayer: CALayer {
         CATransaction.commit()
     }
 
-    /// Determining the position for Range selection indicator
+    /// Determining the position for Range selection indicator.
     ///
-    /// - Parameter value: It may be Lower Indicator value or Upper Indicator value
-    /// - Returns: Position for Indicator
+    /// - Parameter value: It may be Lower Indicator value or Upper Indicator value.
+    /// - Returns: Position for Indicator.
     func positionForValue(value: Double) -> Double {
         return Double(bounds.width - indicatorWidth) * (value - minValue) /
             (maxValue - minValue) + Double(indicatorWidth / 2.0)
@@ -328,13 +328,13 @@ class RangeSliderIndicatorLayer: CALayer {
         return lowerIndicatorLayer.highlighted || upperIndicatorLayer.highlighted
     }
 
-    /// Used to calculate Minimum from lower & upper
+    /// Used to calculate Minimum from lower & upper.
     ///
     /// - Parameters:
-    ///   - value: Selected indicator value
-    ///   - lowerValue: Lower Indicator value
-    ///   - upperValue: Upper Indicator value
-    /// - Returns: Minimum value
+    ///   - value: Selected indicator value.
+    ///   - lowerValue: Lower Indicator value.
+    ///   - upperValue: Upper Indicator value.
+    /// - Returns: Minimum value.
     func boundValue(value: Double, toLowerValue lowerValue: Double, upperValue: Double) -> Double {
         return min(max(value, lowerValue), upperValue)
     }

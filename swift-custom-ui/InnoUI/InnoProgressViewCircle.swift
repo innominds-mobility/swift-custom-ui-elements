@@ -20,47 +20,53 @@ import UIKit
     }
     */
 
-    /// IBInspectable for Progress color of InnoProgressViewCircle
+    /// IBInspectable for Progress color of InnoProgressViewCircle.
     @IBInspectable public var progressColor: UIColor = UIColor.orange {
         didSet {
             setNeedsDisplay()
         }
     }
-    /// IBInspectable for Progress default color of InnoProgressViewCircle
+    /// IBInspectable for Progress default color of InnoProgressViewCircle.
     @IBInspectable public var progressDefaultColor: UIColor = UIColor.lightGray {
         didSet {
             setNeedsDisplay()
         }
     }
-    /// IBInspectable for Progress width of InnoProgressViewCircle
+    /// IBInspectable for Progress width of InnoProgressViewCircle.
     @IBInspectable public var progressWidth: CGFloat = 0.0
-    /// IBInspectable for Progress value of InnoProgressViewCircle
+    /// IBInspectable for Progress value of InnoProgressViewCircle.
     @IBInspectable public var progress: CGFloat = 0.0 {
         didSet {
             self.drawProgressCircleViewLayer(progressVal:progress, strokeColor: self.progressColor)
         }
     }
-    /// Performing custom drawing for progress circle
+    /// Performing custom drawing for progress circle.
     ///
-    /// - Parameter rect: The portion of the view’s bounds that needs to be updated
+    /// - Parameter rect: The portion of the view’s bounds that needs to be updated.
     override public func draw(_ rect: CGRect) {
         // Add ARCs
         self.drawDefaultCircleLayer()
         self.drawProgressCircleViewLayer(progressVal: self.progress, strokeColor: self.progressColor)
     }
-    /// Shape layer for default circle
+    /// Shape layer for default circle.
     var defaultCircleLayer: CAShapeLayer = CAShapeLayer()
-    /// Shape layer for progress circle
+    /// Shape layer for progress circle.
     let progressCircleLayer: CAShapeLayer = CAShapeLayer()
 
     // MARK: Drawing default circle layer method
     /// This method draws default circle layer on a bezier path and adds a stroke color to it.
     func drawDefaultCircleLayer() {
+        /// Center point of circle.
         let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
+        /// Radius of arc.
         let radius: CGFloat = max(bounds.width, bounds.height)
+        /// Arc width.
         let arcWidth: CGFloat = self.progressWidth
+        /// Start angle.
         let startAngle: CGFloat = 3 * 3.14/2// 3* π / 4
+        /// End angle.
         let endAngle: CGFloat = startAngle + CGFloat(2 * 3.14 * 1.0)//π / 4
+        /// Path for default circle.
         let defaultPath = UIBezierPath(arcCenter: center,
                                         radius: radius/2 - arcWidth/2,
                                         startAngle: startAngle,
@@ -82,16 +88,22 @@ import UIKit
     /// For every change in progress value, this method is called.
     ///
     /// - Parameters:
-    ///   - progressVal: Progress value for circle
-    ///   - strokeColor: color of circle
+    ///   - progressVal: Progress value for circle.
+    ///   - strokeColor: color of circle.
     func drawProgressCircleViewLayer(progressVal: CGFloat, strokeColor: UIColor) {
 
         progressCircleLayer.removeFromSuperlayer()
+        /// Center point of arc.
         let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
+        /// Radius of arc.
         let radius: CGFloat = max(bounds.width, bounds.height)
+        /// Arc width.
         let arcWidth: CGFloat = self.progressWidth
+        /// Start angle.
         let startAngle: CGFloat = 3 * 3.14/2// 3* π / 4
+        /// End angle.
         let endAngle: CGFloat = startAngle + CGFloat(2 * 3.14 * progressVal)//π / 4
+        /// Path for progress circle
         let pCirclePath = UIBezierPath(arcCenter: center,
                                        radius: radius/2 - arcWidth/2,
                                        startAngle: startAngle,

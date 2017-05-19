@@ -45,9 +45,11 @@ class RangeSelectionViewController: UIViewController {
     }
     // MARK: 
 
-    /// Method to show the value of range slider values
+    /// Method to show the value of range slider values.
     func getRangeSelectionText() {
+        /// Lower value of range
         let lowVal = Int(rangeSlider.lowerValue)
+        /// Higher value of range
         let highVal = Int(rangeSlider.upperValue)
         self.selectedValLbl.text = "Selected Range: \(lowVal) to \(highVal)"
     }

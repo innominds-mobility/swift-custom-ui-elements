@@ -18,36 +18,36 @@ import UIKit
         // Drawing code
     }
     */
-    /// IBInspectable for Progress of InnoProgressViewBar
+    /// IBInspectable for Progress of InnoProgressViewBar.
     @IBInspectable public var progressValue: CGFloat = 0.0 {
         didSet {
             self.drawProgressBarLayer(incremented: progressValue)
         }
     }
-    /// IBInspectable for Bar corner radius of InnoProgressViewBar
+    /// IBInspectable for Bar corner radius of InnoProgressViewBar.
     @IBInspectable public var barCornerRadius: CGFloat = 0.0 {
         didSet {
             self.layer.masksToBounds = true
             self.layer.cornerRadius = barCornerRadius
         }
     }
-    /// IBInspectable for Bar color of InnoProgressViewBar
+    /// IBInspectable for Bar color of InnoProgressViewBar.
     @IBInspectable public var barColor: UIColor = UIColor.clear
-    /// IBInspectable for Progress color of InnoProgressViewBar
+    /// IBInspectable for Progress color of InnoProgressViewBar.
     @IBInspectable public var progressColor: UIColor = UIColor.green
 
-    /// Performing custom drawing for Progress bar
+    /// Performing custom drawing for Progress bar.
     ///
-    /// - Parameter rect: The portion of the view’s bounds that needs to be updated
+    /// - Parameter rect: The portion of the view’s bounds that needs to be updated.
     override public func draw(_ rect: CGRect) {
         // Add ARCs
         self.drawDefaultBarLayer()
         self.drawProgressBarLayer(incremented: self.progressValue)
     }
 
-    /// Shape layer for Progress default bar
+    /// Shape layer for Progress default bar.
     var borderLayer: CAShapeLayer = CAShapeLayer()
-    /// Shape layer for Progress bar
+    /// Shape layer for Progress bar.
     let progressBarLayer: CAShapeLayer = CAShapeLayer()
 
     // MARK: Drawing default bar layer method
@@ -55,6 +55,7 @@ import UIKit
     /// This layer is added as a sublayer for self.
     func drawDefaultBarLayer() {
 
+        /// Path for default bar.
         let bezierPath = UIBezierPath(roundedRect:bounds, cornerRadius: self.barCornerRadius)
         bezierPath.close()
         borderLayer.path = bezierPath.cgPath
@@ -72,6 +73,7 @@ import UIKit
     func drawProgressBarLayer(incremented: CGFloat) {
         if incremented*(bounds.width-10)/100 <= bounds.width - 10 {
             progressBarLayer.removeFromSuperlayer()
+            /// Path for progress bar.
             let bezierPathProgessBar = UIBezierPath(roundedRect: CGRect(x:5, y: 5,
                                                                     width:incremented*(bounds.width-10)/100,
                                                                         height:bounds.height - 10),

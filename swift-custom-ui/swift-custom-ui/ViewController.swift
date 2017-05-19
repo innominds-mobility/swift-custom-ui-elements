@@ -28,13 +28,14 @@ class ViewController: UIViewController {
 
     /// The view (subclass of customProgressView) for the progressCircle.
     @IBOutlet weak var customProgressView: InnoProgressViewCircle!
-    ///Getting refernce for currnet view
+    ///Refernce for currnet view
     var currentWindow: UIWindow?
        // MARK: - Default View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Progress View"
 
+        /// Tap gesture recognizer for dismissing keyboard.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
                     action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
     }
 
      // MARK: - Textfield delegate Methods
-    /// UITextfield delegate method
+    /// UITextfield delegate method/
     ///
     /// - Parameter textField: The text field whose return button was pressed.
     /// - Returns: YES if the text field should implement its default behavior for the return button; otherwise, NO.
@@ -58,7 +59,7 @@ class ViewController: UIViewController {
 
      // MARK: Tap gesture handle Method
 
-    /// Tap gesture handle Method
+    /// Tap gesture handle Method.
     func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -73,19 +74,21 @@ class ViewController: UIViewController {
             progressBarView.progressValue = CGFloat(Float(progressValTextFld.text!)!)
             customProgressView.setNeedsDisplay()
             customProgressView.progress = CGFloat(Float(progressValTextFld.text!)!)/100 // Value should be in decimals
-            // Getting toast message with progress value
+            // toast message with progress value
             currentWindow!.makeToast(message:
                 "Progress value is \(progressValTextFld.text!)"
             )
         }
     }
-    /// It triggers range selection view controller
+    /// It triggers range selection view controller.
     ///
     /// - Parameter sender: The button that invokes this IBAction method.
     @IBAction func showRangeSliderButtonAction(_ sender: Any) {
 
+        /// get reference for RangeSelectionViewController.
         if let rangeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
             "RangeSelectionViewController") as? RangeSelectionViewController {
+            /// Check for navigation control and push to RangeSelectionViewController.
             if let navigator = navigationController {
                 navigator.pushViewController(rangeVC, animated: true)
             }
