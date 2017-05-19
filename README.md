@@ -24,6 +24,7 @@ import InnoUI
 ### Rounded and corner type button 
 #### Description
 With `InnoButton`, you can directly give rounded corners to UIButton by subclassing it.
+![InnoButton Icon](InnoButton.png "InnoButton Icon")
 
 #### Usage
 Add an UIbutton IBOutlet from IB or can do programetically by subclassing `InnoButton`.    
@@ -38,6 +39,7 @@ showButton.cornerRadius = 20
 * Width of circle
 * Higlighted progress color
 * Default color of circle.
+![InnoProgressViewCircle Icon](InnoProgressViewCircle.png "InnoProgressViewCircle Icon")
 
 #### Usage
 Add an uiview IBoutlet from IB or can do by programetically create a uiview subclassing `InnoProgressViewCircle`.  
