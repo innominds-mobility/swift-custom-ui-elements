@@ -13,36 +13,36 @@ import QuartzCore
 
 /// This class draws rectangle for track layer on a bezier path and fills color to it.
 /// curvaceousness defines the cornerradius for track layer.
-/// And changes the selected tarck/range with a different color i.e trackHighlightTintColor
+/// And changes the selected tarck/range with a different color i.e trackHighlightTintColor.
 class RangeSelectionSliderTrackLayer: CALayer {
-    /// The InnoRangeSelectionSlider for Range slider
+    /// The InnoRangeSelectionSlider for Range slider.
     weak var rangeSlider: InnoRangeSelectionSlider?
-    /// Performing custom drawing for Range selection slider
+    /// Performing custom drawing for Range selection slider.
     ///
-    /// - Parameter contex: The portion of the Layer context that needs to be updated
+    /// - Parameter contex: The portion of the Layer context that needs to be updated.
     override func draw(in contex: CGContext) {
         /// Checking for Range slider
         guard let slider = rangeSlider else {
             return
         }
-            /// Track layer corner radius
+            /// Track layer corner radius.
             let cornerRadius = bounds.height * slider.curvaceousness / 2.0
-            /// Track layer path
+            /// Track layer path.
             let path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
             contex.addPath(path.cgPath)
 
-            // Fill the track
+            // Fill the track.
             contex.setFillColor(slider.trackTintColor.cgColor)
             contex.addPath(path.cgPath)
             contex.fillPath()
 
-            // Fill the highlighted range
+            // Fill the highlighted range.
             contex.setFillColor(slider.trackHighlightTintColor.cgColor)
-            /// Lower value position for range selector
+            /// Lower value position for range selector.
             let lowerValPosition = CGFloat(slider.positionForValue(value: slider.lowerValue))
-            /// Upper value position for range selector
+            /// Upper value position for range selector.
             let upperValPosition = CGFloat(slider.positionForValue(value: slider.upperValue))
-            /// Range/Track layer position bounds
+            /// Range/Track layer position bounds.
             let rect = CGRect(x: lowerValPosition, y: 0.0,
                               width: upperValPosition - lowerValPosition,
                               height: bounds.height)
@@ -58,48 +58,48 @@ class RangeSelectionSliderTrackLayer: CALayer {
 /// curvaceousness defines the cornerradius for indicator layer.
 /// And changes indicator color when it is highlighted.
 class RangeSliderIndicatorLayer: CALayer {
-    /// Indicator highlight boolean
+    /// Indicator highlight boolean.
     var highlighted: Bool = false {
         didSet {
             setNeedsDisplay()
         }
     }
-    /// The InnoRangeSelectionSlider for Range slider
+    /// The InnoRangeSelectionSlider for Range slider.
     weak var rangeSlider: InnoRangeSelectionSlider?
-    /// Stroke color for outline indicator
+    /// Stroke color for outline indicator.
     var strokeColor: UIColor = UIColor.gray {
         didSet {
             setNeedsDisplay()
         }
     }
-    /// Line width for Indicator
+    /// Line width for Indicator.
     var lineWidth: CGFloat = 0.5 {
         didSet {
             setNeedsDisplay()
         }
     }
 
-    /// Performing custom drawing for Indicator
+    /// Performing custom drawing for Indicator.
     ///
-    /// - Parameter ctx: The portion of the Layer context that needs to be updated
+    /// - Parameter ctx: The portion of the Layer context that needs to be updated.
     override func draw(in ctx: CGContext) {
         /// Check for Range slider
         guard let slider = rangeSlider else {
          return
         }
-            /// Frame for Indicator
+            /// Frame for Indicator.
             let indicatorFrame = bounds.insetBy(dx: 2.0, dy: 2.0)
-            /// Corner radius value for indicator
+            /// Corner radius value for indicator.
             let cornerRadius = indicatorFrame.height * slider.curvaceousness / 2.0
-            /// Path for Indicator
+            /// Path for Indicator.
             let indicatorPath = UIBezierPath(roundedRect: indicatorFrame, cornerRadius: cornerRadius)
 
-            // Fill indicator
+            // Fill indicator.
             ctx.setFillColor(slider.indicatorTintColor.cgColor)
             ctx.addPath(indicatorPath.cgPath)
             ctx.fillPath()
 
-            // Outline indicator
+            // Outline indicator.
             ctx.setStrokeColor(strokeColor.cgColor)
             ctx.setLineWidth(lineWidth)
             ctx.addPath(indicatorPath.cgPath)
@@ -113,7 +113,7 @@ class RangeSliderIndicatorLayer: CALayer {
     }
 }
 
-// MARK: Class: Range Selection Slider
+// MARK: Class: Range Selection Slider.
 
 /// This class combines track layer and indicators layer to form a selection slider for selecting a range.
 /// Defines different properties to change the UI dynamically.
@@ -126,7 +126,7 @@ class RangeSliderIndicatorLayer: CALayer {
         // Drawing code
     }
     */
-    /// IBInspectable for Minimum value of InnoRangeSelectionSlider
+    /// IBInspectable for Minimum value of InnoRangeSelectionSlider.
     @IBInspectable public var minValue: Double = 0.0 {
         didSet {
             updateRangeSliderLayerFrames()

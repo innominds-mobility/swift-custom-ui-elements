@@ -67,15 +67,22 @@ public extension UIView {
     ///
     /// - Parameter msg: Message to be displayed in toast
     func makeToast(message msg: String) {
+        /// Get toast view UI with message
         let toast = self.viewForMessage(msg)
         showToast(toast: toast!, duration: toastDefaultDuration, position: toastPositionDefault as AnyObject)
     }
-    // Showing the Toast message.
+    /// Showing the Toast message.
+    ///
+    /// - Parameters:
+    ///   - toast: Toast view with message
+    ///   - duration: time interval for the toast to display
+    ///   - position: at which position toast to be displayed
     fileprivate func showToast(toast: UIView, duration: Double, position: AnyObject) {
         toast.center = centerPointForPosition(position, toast: toast)
         toast.alpha = 0.0
          // Tap gesture is added for toast message, on tap of it toast will be hidden
         if toastHidesOnTap {
+            /// Tap gesture for toast
             let tapRecognizer = UITapGestureRecognizer(target: toast, action: #selector(UIView.handleToastTapped(_:)))
             toast.addGestureRecognizer(tapRecognizer)
             toast.isUserInteractionEnabled = true
@@ -97,11 +104,18 @@ public extension UIView {
                         objc_setAssociatedObject(toast, &toastTimer, timer, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         })
     }
-    //Hiding the toast message
+    /// Hiding the toast message.
+    ///
+    /// - Parameter toast: View with toast message.
     func hideToast(toast: UIView) {
         hideToast(toast: toast, force: false)
     }
 
+    /// Hides toast message.
+    ///
+    /// - Parameters:
+    ///   - toast: View with toast message.
+    ///   - force: true if hiding toast without animation. If false, hides with animation.
     func hideToast(toast: UIView, force: Bool) {
         let completeClosure = { (finish: Bool) -> Void in
             toast.removeFromSuperview()
@@ -120,20 +134,32 @@ public extension UIView {
                            completion:completeClosure)
         }
     }
-     // Timer finish handle method
+    /// Timer finish handle method
+    ///
+    /// - Parameter timer: Timer
     func toastTimerDidFinish(_ timer: Timer) {
         hideToast(toast: (timer.userInfo as? UIView)!)
     }
-    // Tap gesture handle method
+    /// Tap gesture handle method
+    ///
+    /// - Parameter recognizer: The gesture recognizer is attached to view.
     func handleToastTapped(_ recognizer: UITapGestureRecognizer) {
+        /// Timer for toast
         let timer = objc_getAssociatedObject(self, &toastTimer) as? Timer!
         timer?.invalidate()
         hideToast(toast: recognizer.view!)
     }
-    // This function decides where to display the Toast message i.e top or center or bottom
+    /// This function decides where to display the Toast message i.e top or center or bottom
+    ///
+    /// - Parameters:
+    ///   - position: Top or center or bottom
+    ///   - toast: View with toast message
+    /// - Returns: Position for toast to be displayed
     fileprivate func centerPointForPosition(_ position: AnyObject, toast: UIView) -> CGPoint {
         if position is String {
+            /// Toast size
             let toastSize = toast.bounds.size
+            /// View size
             let viewSize  = self.bounds.size
             if position.lowercased == toastPositionTop {
                 return CGPoint(x: viewSize.width/2, y: toastSize.height/2 + toastVerticalMargin)
@@ -148,15 +174,19 @@ public extension UIView {
         print("Warning! Invalid position for toast.")
         return self.centerPointForPosition(toastPositionDefault as AnyObject, toast: toast)
     }
-    /* 
-     Creating the view for Toast. A shadow is created for the toast view.
-     Message label dimensions are calculated dynamically based on given toast message.
-     */
+    /// Creating the view for Toast. A shadow is created for the toast view.
+    /// Message label dimensions are calculated dynamically based on given toast message.
+    ///
+    /// - Parameter msg: Toast message
+    /// - Returns: View with toats message UI
     fileprivate func viewForMessage(_ msg: String?) -> UIView? {
         if msg == nil { return nil }
-        var msgLabel: UILabel? ; let wrapperToastView = UIView()
-        wrapperToastView.autoresizingMask = ([.flexibleLeftMargin,
-                            .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin])
+        /// Message label
+        var msgLabel: UILabel?
+        /// Toast view
+        let wrapperToastView = UIView()
+        wrapperToastView.autoresizingMask = (
+            [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin])
         wrapperToastView.layer.cornerRadius = toastCornerRadius
         wrapperToastView.backgroundColor = UIColor.black.withAlphaComponent(toastOpacity)
         if toastDisplayShadow {
@@ -166,8 +196,7 @@ public extension UIView {
             wrapperToastView.layer.shadowOffset = toastShadowOffset
         }
         if msg != nil {
-            msgLabel = UILabel()
-            msgLabel!.numberOfLines = toastMaxMessageLines
+            msgLabel = UILabel(); msgLabel!.numberOfLines = toastMaxMessageLines
             msgLabel!.font = UIFont(name: "Optima-Regular", size: messageFontSize) //Any font
             msgLabel!.lineBreakMode = .byWordWrapping
             msgLabel!.textAlignment = .center
@@ -175,11 +204,14 @@ public extension UIView {
             msgLabel!.backgroundColor = UIColor.clear
             msgLabel!.alpha = 1.0
             msgLabel!.text = msg
+            /// Message Text size
             let maxSizeMessage = CGSize(width: (self.bounds.size.width * toastMaxWidth),
                                         height: self.bounds.size.height * toastMaxHeight)
+            /// Expected height for message label
             let expectedHeight = msg!.toastStringHeightWithFontSize(messageFontSize, width: maxSizeMessage.width)
             msgLabel!.frame = CGRect(x: 0.0, y: 0.0, width: maxSizeMessage.width, height: expectedHeight)
         }
+        /// Message width, height, top, left
         var msgWidth: CGFloat, msgHeight: CGFloat, msgTop: CGFloat, msgLeft: CGFloat
         if msgLabel != nil {
             msgWidth = msgLabel!.bounds.size.width;msgHeight = msgLabel!.bounds.size.height
@@ -187,9 +219,12 @@ public extension UIView {
         } else {
             msgWidth = 0.0; msgHeight = 0.0; msgTop = 0.0; msgLeft = 0.0
         }
+        /// Maximum width. ; maximum left.
         let largerWidth = max(0, msgWidth); let largerLeft  = max(0, msgLeft)
+        /// Toast view width.
         let wrapperWidth  = max(toastHorizontalMargin * 2,
-                                largerLeft + largerWidth + toastHorizontalMargin) // set wrapper view's frame
+                                largerLeft + largerWidth + toastHorizontalMargin)
+        /// Toast view height.
         let wrapperHeight = max(msgTop + msgHeight + toastVerticalMargin, toastVerticalMargin * 2)
         wrapperToastView.frame = CGRect(x: 0.0, y: 0.0, width: wrapperWidth, height: wrapperHeight)
         // add subviews
@@ -205,15 +240,28 @@ public extension UIView {
     Extension for String, Getting height for toast message dynamically. 
 Need to provide font name and size for the toast message to calculate the height.
  */
+// MARK: - Message String Extension
 public extension String {
+    /// Calculate height dynamically for the given message.
+    ///
+    /// - Parameters:
+    ///   - fontSize: Font size for given message.
+    ///   - width: Width of message label.
+    /// - Returns: Height of message.
     func toastStringHeightWithFontSize(_ fontSize: CGFloat, width: CGFloat) -> CGFloat {
+        /// Font of message.
         let font = UIFont(name: "Optima-Regular", size: messageFontSize)// Use any Font like "Helvetica"
+        /// Size of message.
         let size = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
+        /// Paragraph style.
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineBreakMode = .byWordWrapping
+        /// Attributes for bounding rect.
         let attributes = [NSFontAttributeName: font!,
                           NSParagraphStyleAttributeName: paragraphStyle.copy()]
+        /// Text
         let text = self as NSString
+        /// Rect for given text with properties to calculte height
         let rect = text.boundingRect(with: size, options:.usesLineFragmentOrigin, attributes: attributes, context:nil)
         return rect.size.height
     }
