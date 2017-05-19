@@ -60,6 +60,7 @@ customProgressView.progress = CGFloat(Float(progressValTextFld.text!)!)/100
 * Higlighted progress bar color
 * Default color of bar.
 * Height and width (same as uiview)
+![InnoProgressViewBar Icon](InnoProgressViewBar.png "InnoProgressViewBar Icon")
 
 #### Usage
 Using this progress bar is very simple by adding an uiview IBoutlet from IB or can do programetically create a uiview by subclassing `InnoProgressViewBar`. 
@@ -85,6 +86,7 @@ progressBarView.progressValue = CGFloat(Float(progressValTextFld.text!)!)
 * Track Highlighting color
 * Indicator tint color
 * Curvaceousness - Defines the shape for indicator. It may be a circle or a square with corner radius. Values- 0.0 to 1.0
+![InnoRangeSelectionSlider Icon](InnoRangeSelectionSlider.png "InnoRangeSelectionSlider Icon")
 
 #### Usage
 Add an uiview IBoutlet from IB or can do by programetically create a uiview by subclassing `InnoRangeSelectionSlider`.  
@@ -108,6 +110,7 @@ self.selectedValLbl.text = "Selected Range: \(lowVal) to \(highVal)"
 ### Toast message UI
 #### Description
 Toast message can be used to display information for the short period of time. A toast contains message to be displayed quickly and disappears after sometime. `UIView+InnoToastMessageUI` is an extension of UIView. Include this file in your project to get toast message.
+![InnoToastMessageUI Icon](InnoToastMessageUI.png "InnoToastMessageUI Icon")
 #### Usage
 To show toast message call `makeToast` on view OR window as per your requirements. 
 ```swift
