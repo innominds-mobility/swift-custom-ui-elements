@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fWb-Is-K2l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fWb-Is-K2l">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,141 +22,165 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Progress Value (1-100)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-Z4-XLG">
-                                <rect key="frame" x="69" y="122" width="236" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="236" id="5Bf-VV-NCr"/>
-                                    <constraint firstAttribute="height" constant="30" id="m8a-5l-k7j"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CXg-OV-TjF"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAs-Nh-lrv">
-                                <rect key="frame" x="0.0" y="67" width="375" height="45"/>
+                                <rect key="frame" x="20" y="65" width="334" height="38"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Xkk-dG-VpC"/>
+                                    <constraint firstAttribute="width" constant="334" id="BaT-Tq-J8d"/>
+                                    <constraint firstAttribute="height" constant="38" id="pZS-L8-vSK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6x-E1-n5T" customClass="InnoProgressViewCircle" customModule="InnoUI">
-                                <rect key="frame" x="87" y="212" width="200" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNO-m7-KUc">
+                                <rect key="frame" x="0.0" y="111" width="375" height="556"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYS-nL-Ra8" customClass="InnoProgressViewBar" customModule="InnoUI">
+                                        <rect key="frame" x="29" y="329" width="317" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="XDT-mX-UYr"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="barCornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressValue">
+                                                <real key="value" value="45"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                                <color key="value" red="0.94509803921568625" green="0.96862745098039216" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                <color key="value" red="0.46274509803921571" green="0.57647058823529407" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taN-OU-gRO" customClass="InnoButton" customModule="InnoUI">
+                                        <rect key="frame" x="69" y="49" width="236" height="40"/>
+                                        <color key="backgroundColor" red="0.92941176470588238" green="0.41568627450980389" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="SSg-xh-Mns"/>
+                                        </constraints>
+                                        <state key="normal" title="Show Progress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="showProgressButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q9t-cR-N0q"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Progress Value (1-100)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-Z4-XLG">
+                                        <rect key="frame" x="69" y="5" width="236" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="dBc-Jz-5P6"/>
+                                            <constraint firstAttribute="width" constant="236" id="e6P-yk-bzM"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="CXg-OV-TjF"/>
+                                        </connections>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6x-E1-n5T" customClass="InnoProgressViewCircle" customModule="InnoUI">
+                                        <rect key="frame" x="87" y="104" width="200" height="200"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="5pX-Ik-boG"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                <color key="value" red="0.46274509803921571" green="0.57647058823529407" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressDefaultColor">
+                                                <color key="value" red="0.94509803920000002" green="0.96862745100000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pw-nj-T30">
+                                        <rect key="frame" x="110" y="495" width="155" height="30"/>
+                                        <state key="normal" title="Image with shapes"/>
+                                        <connections>
+                                            <action selector="goToImageShapes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6F4-0U-LtH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNt-Ao-kUw">
+                                        <rect key="frame" x="110" y="457" width="155" height="30"/>
+                                        <state key="normal" title="BottomBorderTextfield"/>
+                                        <connections>
+                                            <action selector="gotoCustomTextField:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIZ-pX-pMX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOj-HD-dr0">
+                                        <rect key="frame" x="110" y="419" width="155" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="155" id="HGm-cQ-bRc"/>
+                                            <constraint firstAttribute="height" constant="30" id="Vd0-hM-m4B"/>
+                                        </constraints>
+                                        <state key="normal" title="Radiant background"/>
+                                        <connections>
+                                            <action selector="gotoRadiantView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dHC-jr-Xd0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlF-KJ-Ev9">
+                                        <rect key="frame" x="110" y="381" width="155" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="155" id="YsS-qe-5VW"/>
+                                            <constraint firstAttribute="height" constant="30" id="gvi-lA-EMI"/>
+                                        </constraints>
+                                        <state key="normal" title="Show RangeSlider"/>
+                                        <connections>
+                                            <action selector="showRangeSliderButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3m-xa-Rs3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="dX6-bC-RXv"/>
-                                    <constraint firstAttribute="width" constant="200" id="pdE-hd-Y21"/>
+                                    <constraint firstItem="D6x-E1-n5T" firstAttribute="top" secondItem="taN-OU-gRO" secondAttribute="bottom" constant="15" id="7Yz-bU-0Yg"/>
+                                    <constraint firstAttribute="trailing" secondItem="ifU-Z4-XLG" secondAttribute="trailing" constant="70" id="8rt-Us-BOT"/>
+                                    <constraint firstAttribute="trailing" secondItem="nNt-Ao-kUw" secondAttribute="trailing" constant="110" id="9Pq-Ph-Hbt"/>
+                                    <constraint firstAttribute="trailing" secondItem="D6x-E1-n5T" secondAttribute="trailing" constant="88" id="Caq-1X-qE5"/>
+                                    <constraint firstAttribute="trailing" secondItem="LlF-KJ-Ev9" secondAttribute="trailing" constant="110" id="DjZ-cE-4WB"/>
+                                    <constraint firstItem="LlF-KJ-Ev9" firstAttribute="top" secondItem="IYS-nL-Ra8" secondAttribute="bottom" constant="22" id="FW7-sk-biz"/>
+                                    <constraint firstAttribute="trailing" secondItem="IYS-nL-Ra8" secondAttribute="trailing" constant="29" id="IfZ-Ih-bP3"/>
+                                    <constraint firstAttribute="bottom" secondItem="4pw-nj-T30" secondAttribute="bottom" constant="31" id="J8R-rJ-hy1"/>
+                                    <constraint firstItem="LlF-KJ-Ev9" firstAttribute="leading" secondItem="YNO-m7-KUc" secondAttribute="leading" constant="110" id="Lfa-GG-9vq"/>
+                                    <constraint firstItem="D6x-E1-n5T" firstAttribute="leading" secondItem="YNO-m7-KUc" secondAttribute="leading" constant="87" id="MRj-DD-ZBw"/>
+                                    <constraint firstAttribute="trailing" secondItem="4pw-nj-T30" secondAttribute="trailing" constant="110" id="Q48-qA-nNq"/>
+                                    <constraint firstItem="IYS-nL-Ra8" firstAttribute="leading" secondItem="YNO-m7-KUc" secondAttribute="leading" constant="29" id="Qz9-xw-V4G"/>
+                                    <constraint firstItem="taN-OU-gRO" firstAttribute="top" secondItem="ifU-Z4-XLG" secondAttribute="bottom" constant="14" id="THh-9Z-zOu"/>
+                                    <constraint firstItem="IYS-nL-Ra8" firstAttribute="top" secondItem="D6x-E1-n5T" secondAttribute="bottom" constant="25" id="WUG-bh-ybd"/>
+                                    <constraint firstAttribute="trailing" secondItem="taN-OU-gRO" secondAttribute="trailing" constant="70" id="ZTb-SL-519"/>
+                                    <constraint firstItem="taN-OU-gRO" firstAttribute="leading" secondItem="YNO-m7-KUc" secondAttribute="leading" constant="69" id="ZTh-Tg-xC0"/>
+                                    <constraint firstItem="ifU-Z4-XLG" firstAttribute="leading" secondItem="YNO-m7-KUc" secondAttribute="leading" constant="69" id="bbm-2k-fvn"/>
+                                    <constraint firstItem="ifU-Z4-XLG" firstAttribute="top" secondItem="YNO-m7-KUc" secondAttribute="top" constant="5" id="cme-1y-XqM"/>
+                                    <constraint firstItem="EOj-HD-dr0" firstAttribute="leading" secondItem="YNO-m7-KUc" secondAttribute="leading" constant="110" id="eT5-t5-n2Q"/>
+                                    <constraint firstItem="4pw-nj-T30" firstAttribute="leading" secondItem="YNO-m7-KUc" secondAttribute="leading" constant="110" id="g47-LU-u9F"/>
+                                    <constraint firstItem="EOj-HD-dr0" firstAttribute="top" secondItem="LlF-KJ-Ev9" secondAttribute="bottom" constant="8" id="hF7-y8-8fT"/>
+                                    <constraint firstItem="nNt-Ao-kUw" firstAttribute="top" secondItem="EOj-HD-dr0" secondAttribute="bottom" constant="8" id="jnJ-l6-SXR"/>
+                                    <constraint firstItem="nNt-Ao-kUw" firstAttribute="leading" secondItem="YNO-m7-KUc" secondAttribute="leading" constant="110" id="jy3-q8-nNp"/>
+                                    <constraint firstItem="nNt-Ao-kUw" firstAttribute="top" secondItem="EOj-HD-dr0" secondAttribute="bottom" constant="8" id="kfw-Kx-w6b"/>
+                                    <constraint firstItem="4pw-nj-T30" firstAttribute="top" secondItem="nNt-Ao-kUw" secondAttribute="bottom" constant="8" id="mAX-JF-sws"/>
+                                    <constraint firstAttribute="trailing" secondItem="EOj-HD-dr0" secondAttribute="trailing" constant="110" id="pK4-bA-r6F"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <real key="value" value="0.20000000000000001"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressWidth">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
-                                        <color key="value" red="0.46274509803921571" green="0.57647058823529407" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressDefaultColor">
-                                        <color key="value" red="0.94509803920000002" green="0.96862745100000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYS-nL-Ra8" customClass="InnoProgressViewBar" customModule="InnoUI">
-                                <rect key="frame" x="29" y="422" width="317" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="gn4-3L-aL1"/>
-                                    <constraint firstAttribute="width" constant="317" id="k4x-Q3-Odq"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="barCornerRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressValue">
-                                        <real key="value" value="45"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
-                                        <color key="value" red="0.94509803921568625" green="0.96862745098039216" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
-                                        <color key="value" red="0.46274509803921571" green="0.57647058823529407" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taN-OU-gRO" customClass="InnoButton" customModule="InnoUI">
-                                <rect key="frame" x="69" y="162" width="236" height="40"/>
-                                <color key="backgroundColor" red="0.92941176470588238" green="0.41568627450980389" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="DzT-lZ-bVb"/>
-                                    <constraint firstAttribute="width" constant="236" id="vo2-ig-EMV"/>
-                                </constraints>
-                                <state key="normal" title="Show Progress"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="showProgressButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q9t-cR-N0q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlF-KJ-Ev9">
-                                <rect key="frame" x="20" y="480" width="335" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="JyS-RV-LtM"/>
-                                </constraints>
-                                <state key="normal" title="Show RangeSlider"/>
-                                <connections>
-                                    <action selector="showRangeSliderButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3m-xa-Rs3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOj-HD-dr0">
-                                <rect key="frame" x="20" y="520" width="335" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="pNy-QE-koB"/>
-                                </constraints>
-                                <state key="normal" title="Radiant background"/>
-                                <connections>
-                                    <action selector="gotoRadiantView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dHC-jr-Xd0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNt-Ao-kUw">
-                                <rect key="frame" x="20" y="560" width="335" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="lg6-07-TWc"/>
-                                </constraints>
-                                <state key="normal" title="BottomBorderTextfield"/>
-                                <connections>
-                                    <action selector="gotoCustomTextField:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIZ-pX-pMX"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="BAs-Nh-lrv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="3" id="1zT-IS-b3y"/>
-                            <constraint firstItem="IYS-nL-Ra8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3pu-g5-dJi"/>
-                            <constraint firstAttribute="trailing" secondItem="BAs-Nh-lrv" secondAttribute="trailing" id="4CH-Ei-2ht"/>
-                            <constraint firstItem="LlF-KJ-Ev9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="7ak-7T-SHb"/>
-                            <constraint firstItem="nNt-Ao-kUw" firstAttribute="top" secondItem="EOj-HD-dr0" secondAttribute="bottom" constant="10" id="AKM-oe-zXq"/>
-                            <constraint firstItem="ifU-Z4-XLG" firstAttribute="top" secondItem="BAs-Nh-lrv" secondAttribute="bottom" constant="10" id="Gjb-ba-lRS"/>
-                            <constraint firstItem="EOj-HD-dr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="Igb-Go-gpJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nNt-Ao-kUw" secondAttribute="trailing" constant="4" id="Jey-Aw-8BX"/>
-                            <constraint firstItem="taN-OU-gRO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LNb-FX-iLg"/>
-                            <constraint firstItem="nNt-Ao-kUw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="T28-6S-ESE"/>
-                            <constraint firstItem="D6x-E1-n5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T5c-jg-BhT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LlF-KJ-Ev9" secondAttribute="trailing" constant="4" id="TQS-jg-uGU"/>
-                            <constraint firstItem="D6x-E1-n5T" firstAttribute="top" secondItem="taN-OU-gRO" secondAttribute="bottom" constant="10" id="TeW-2c-gEB"/>
-                            <constraint firstItem="BAs-Nh-lrv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bSn-Wh-bFU"/>
-                            <constraint firstItem="IYS-nL-Ra8" firstAttribute="top" secondItem="D6x-E1-n5T" secondAttribute="bottom" constant="10" id="e70-P6-hn8"/>
-                            <constraint firstItem="ifU-Z4-XLG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hgI-Vr-cXj"/>
-                            <constraint firstItem="LlF-KJ-Ev9" firstAttribute="top" secondItem="IYS-nL-Ra8" secondAttribute="bottom" constant="28" id="lfk-uX-Utk"/>
-                            <constraint firstItem="EOj-HD-dr0" firstAttribute="top" secondItem="LlF-KJ-Ev9" secondAttribute="bottom" constant="10" id="mrc-4J-QoO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EOj-HD-dr0" secondAttribute="trailing" constant="4" id="uD3-88-QrZ"/>
-                            <constraint firstItem="taN-OU-gRO" firstAttribute="top" secondItem="ifU-Z4-XLG" secondAttribute="bottom" constant="10" id="xCP-RJ-UIU"/>
+                            <constraint firstItem="YNO-m7-KUc" firstAttribute="top" secondItem="BAs-Nh-lrv" secondAttribute="bottom" constant="8" id="4lJ-kO-cFM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YNO-m7-KUc" secondAttribute="bottom" id="DWT-Rp-7Pp"/>
+                            <constraint firstItem="BAs-Nh-lrv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="J5U-qg-LzR"/>
+                            <constraint firstItem="BAs-Nh-lrv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="Oej-E1-ZMk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BAs-Nh-lrv" secondAttribute="trailing" constant="5" id="gRO-OV-AKA"/>
+                            <constraint firstAttribute="trailing" secondItem="YNO-m7-KUc" secondAttribute="trailing" id="jhc-Ty-zrV"/>
+                            <constraint firstItem="YNO-m7-KUc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nhu-WS-tvx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pNk-8E-udT"/>
@@ -168,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113" y="-690"/>
+            <point key="canvasLocation" x="1112.8" y="-690.40479760119945"/>
         </scene>
         <!--Range Selection View Controller-->
         <scene sceneID="Sfz-ho-2hV">
@@ -339,5 +364,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9d-47-VkJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Image Shapes View Controller-->
+        <scene sceneID="Xjl-JO-yoy">
+            <objects>
+                <viewController storyboardIdentifier="ImageShapesViewController" id="MOj-XH-BNu" customClass="ImageShapesViewController" customModule="swift_custom_ui" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WMb-Sz-Isw"/>
+                        <viewControllerLayoutGuide type="bottom" id="57s-70-sKy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YP4-LB-tfP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="7ed-QN-6Sr">
+                                <rect key="frame" x="112" y="141" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Image in Circluar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-NG-OYL">
+                                <rect key="frame" x="0.0" y="74" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Image in Square" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3is-Fb-nkr">
+                                <rect key="frame" x="0.0" y="347" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gv-EL-32a">
+                                <rect key="frame" x="72" y="390" width="246" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="circularImage" destination="7ed-QN-6Sr" id="1Fs-VZ-Aks"/>
+                        <outlet property="squareImge" destination="2gv-EL-32a" id="bJL-Mo-cBj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6c3-X5-nIi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="-690.40479760119945"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="profileImg" width="300" height="225"/>
+    </resources>
 </document>

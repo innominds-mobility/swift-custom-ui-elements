@@ -118,4 +118,12 @@ class ViewController: UIViewController {
             }
         }
     }
+    @IBAction func goToImageShapes(_ sender: Any) {
+        if let imageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+            "ImageShapesViewController") as? ImageShapesViewController {
+            if let navigator = navigationController {
+                navigator.pushViewController(imageVC, animated: true)
+            }
+        }
+    }
 }
