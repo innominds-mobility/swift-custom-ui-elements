@@ -13,7 +13,7 @@
 		D82568411EC5AEB400676A0E /* RangeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */; };
 		D82D5CFA1EC2E8AF0080B5AB /* InnoProgressViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */; };
 		D85CA4071EC191E800F6942E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA4061EC191E800F6942E /* AppDelegate.swift */; };
-		D85CA4091EC191E800F6942E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA4081EC191E800F6942E /* ViewController.swift */; };
+		D85CA4091EC191E800F6942E /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA4081EC191E800F6942E /* ProgressViewController.swift */; };
 		D85CA40C1EC191E800F6942E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85CA40A1EC191E800F6942E /* Main.storyboard */; };
 		D85CA40E1EC191E800F6942E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85CA40D1EC191E800F6942E /* Assets.xcassets */; };
 		D85CA4111EC191E800F6942E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85CA40F1EC191E800F6942E /* LaunchScreen.storyboard */; };
@@ -24,6 +24,7 @@
 		D85CA42D1EC19A6E00F6942E /* InnoProgressViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA42C1EC19A6E00F6942E /* InnoProgressViewCircle.swift */; };
 		D865B76E1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D865B76D1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift */; };
 		D8683B081ECC4B030030E62E /* UIView+InnoToastMessageUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8683B071ECC4B030030E62E /* UIView+InnoToastMessageUI.swift */; };
+		D87812091ED3FD3C0099A9FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87812081ED3FD3C0099A9FD /* HomeViewController.swift */; };
 		D8AE18F61ED2DE4D00DF2D21 /* ImageShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE18F51ED2DE4D00DF2D21 /* ImageShapesViewController.swift */; };
 		D8AE19011ED2E17800DF2D21 /* Inno.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AE19001ED2E17800DF2D21 /* Inno.xcassets */; };
 		D8AE19041ED2E6A600DF2D21 /* Inno.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AE19001ED2E17800DF2D21 /* Inno.xcassets */; };
@@ -63,7 +64,7 @@
 		D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoProgressViewBar.swift; sourceTree = "<group>"; };
 		D85CA4031EC191E800F6942E /* swift-custom-ui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-custom-ui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85CA4061EC191E800F6942E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D85CA4081EC191E800F6942E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D85CA4081EC191E800F6942E /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		D85CA40B1EC191E800F6942E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D85CA40D1EC191E800F6942E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D85CA4101EC191E800F6942E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		D85CA42C1EC19A6E00F6942E /* InnoProgressViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoProgressViewCircle.swift; sourceTree = "<group>"; };
 		D865B76D1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoRangeSelectionSlider.swift; sourceTree = "<group>"; };
 		D8683B071ECC4B030030E62E /* UIView+InnoToastMessageUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+InnoToastMessageUI.swift"; sourceTree = "<group>"; };
+		D87812081ED3FD3C0099A9FD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D8AE18F51ED2DE4D00DF2D21 /* ImageShapesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageShapesViewController.swift; sourceTree = "<group>"; };
 		D8AE19001ED2E17800DF2D21 /* Inno.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inno.xcassets; sourceTree = "<group>"; };
 		D8AE19051ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+InnoCircularImage.swift"; sourceTree = "<group>"; };
@@ -122,7 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				D85CA4061EC191E800F6942E /* AppDelegate.swift */,
-				D85CA4081EC191E800F6942E /* ViewController.swift */,
+				D87812081ED3FD3C0099A9FD /* HomeViewController.swift */,
+				D85CA4081EC191E800F6942E /* ProgressViewController.swift */,
 				D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */,
 				9A5F23001ECAC953006248CD /* RadiantBackgroundViewController.swift */,
 				9A5F23041ECB1240006248CD /* BottomBorderTextFieldViewController.swift */,
@@ -306,9 +309,10 @@
 			files = (
 				D8AE18F61ED2DE4D00DF2D21 /* ImageShapesViewController.swift in Sources */,
 				9A5F23051ECB1240006248CD /* BottomBorderTextFieldViewController.swift in Sources */,
-				D85CA4091EC191E800F6942E /* ViewController.swift in Sources */,
+				D85CA4091EC191E800F6942E /* ProgressViewController.swift in Sources */,
 				D85CA4071EC191E800F6942E /* AppDelegate.swift in Sources */,
 				9A5F23011ECAC953006248CD /* RadiantBackgroundViewController.swift in Sources */,
+				D87812091ED3FD3C0099A9FD /* HomeViewController.swift in Sources */,
 				D82568411EC5AEB400676A0E /* RangeSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

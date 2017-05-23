@@ -9,12 +9,13 @@
 import UIKit
 import InnoUI
 
-/// The purpose of this view controller is to provide a user interface for Custom UI elements.
+/// The purpose of this view controller is to provide a user interface for 
+/// Progress view bar & circle, rounded button, toast message.
 /// There's a matching scene in the *Main.storyboard* file, and in that scene there are Custom UI elements.
 /// Go to Interface Builder for details.
-/// The `ViewController` class is a subclass of the `UIViewController`.
+/// The `ProgressViewController` class is a subclass of the `UIViewController`.
 
-class ViewController: UIViewController {
+class ProgressViewController: UIViewController {
     // MARK: - IBOutlet Properties
 
     /// The textfield for the progress Value.
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
 
         /// Tap gesture recognizer for dismissing keyboard.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
-                    action: #selector(ViewController.dismissKeyboard))
+                    action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
         currentWindow = UIApplication.shared.keyWindow
     }
@@ -83,50 +84,40 @@ class ViewController: UIViewController {
     /// It triggers range selection view controller.
     ///
     /// - Parameter sender: The button that invokes this IBAction method.
-    @IBAction func showRangeSliderButtonAction(_ sender: Any) {
-
-        /// get reference for RangeSelectionViewController.
-        if let rangeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
-            "RangeSelectionViewController") as? RangeSelectionViewController {
-            /// Check for navigation control and push to RangeSelectionViewController.
-            if let navigator = navigationController {
-                navigator.pushViewController(rangeVC, animated: true)
-            }
-        }
-
-    }
+//    @IBAction func showRangeSliderButtonAction(_ sender: Any) {
+//
+//        /// get reference for RangeSelectionViewController.
+//        if let rangeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+//            "RangeSelectionViewController") as? RangeSelectionViewController {
+//            /// Check for navigation control and push to RangeSelectionViewController.
+//            if let navigator = navigationController {
+//                navigator.pushViewController(rangeVC, animated: true)
+//            }
+//        }
+//
+//    }
 
     /// It triggers Radiant background view
     ///
     /// - Parameter sender: The button that invokes this IBAction method.
-    @IBAction func gotoRadiantView(_ sender: UIButton) {
-        if let radiantVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
-            "RadiantBackgroundViewController") as? RadiantBackgroundViewController {
-            if let navigator = navigationController {
-                navigator.pushViewController(radiantVC, animated: true)
-            }
-        }
-    }
+//    @IBAction func gotoRadiantView(_ sender: UIButton) {
+//        if let radiantVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+//            "RadiantBackgroundViewController") as? RadiantBackgroundViewController {
+//            if let navigator = navigationController {
+//                navigator.pushViewController(radiantVC, animated: true)
+//            }
+//        }
+//    }
     /// It triggers Custom Textfield
     ///
     /// - Parameter sender: The button that invokes this IBAction method.
-    @IBAction func gotoCustomTextField(_ sender: UIButton) {
-        if let customTxtFldVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
-            "BottomBorderTextFieldViewController") as? BottomBorderTextFieldViewController {
-            if let navigator = navigationController {
-                navigator.pushViewController(customTxtFldVC, animated: true)
-            }
-        }
-    }
-    /// It triggers ImageShapes VC
-    ///
-    /// - Parameter sender: The button that invokes this IBAction method.
-    @IBAction func goToImageShapes(_ sender: Any) {
-        if let imageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
-            "ImageShapesViewController") as? ImageShapesViewController {
-            if let navigator = navigationController {
-                navigator.pushViewController(imageVC, animated: true)
-            }
-        }
-    }
+//    @IBAction func gotoCustomTextField(_ sender: UIButton) {
+//        if let customTxtFldVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+//            "BottomBorderTextFieldViewController") as? BottomBorderTextFieldViewController {
+//            if let navigator = navigationController {
+//                navigator.pushViewController(customTxtFldVC, animated: true)
+//            }
+//        }
+//    }
+
 }
