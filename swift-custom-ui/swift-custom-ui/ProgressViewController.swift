@@ -81,43 +81,4 @@ class ProgressViewController: UIViewController {
             )
         }
     }
-    /// It triggers range selection view controller.
-    ///
-    /// - Parameter sender: The button that invokes this IBAction method.
-//    @IBAction func showRangeSliderButtonAction(_ sender: Any) {
-//
-//        /// get reference for RangeSelectionViewController.
-//        if let rangeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
-//            "RangeSelectionViewController") as? RangeSelectionViewController {
-//            /// Check for navigation control and push to RangeSelectionViewController.
-//            if let navigator = navigationController {
-//                navigator.pushViewController(rangeVC, animated: true)
-//            }
-//        }
-//
-//    }
-
-    /// It triggers Radiant background view
-    ///
-    /// - Parameter sender: The button that invokes this IBAction method.
-//    @IBAction func gotoRadiantView(_ sender: UIButton) {
-//        if let radiantVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
-//            "RadiantBackgroundViewController") as? RadiantBackgroundViewController {
-//            if let navigator = navigationController {
-//                navigator.pushViewController(radiantVC, animated: true)
-//            }
-//        }
-//    }
-    /// It triggers Custom Textfield
-    ///
-    /// - Parameter sender: The button that invokes this IBAction method.
-//    @IBAction func gotoCustomTextField(_ sender: UIButton) {
-//        if let customTxtFldVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
-//            "BottomBorderTextFieldViewController") as? BottomBorderTextFieldViewController {
-//            if let navigator = navigationController {
-//                navigator.pushViewController(customTxtFldVC, animated: true)
-//            }
-//        }
-//    }
-
 }

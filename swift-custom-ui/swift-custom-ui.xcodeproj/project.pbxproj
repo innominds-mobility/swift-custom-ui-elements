@@ -25,9 +25,8 @@
 		D865B76E1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D865B76D1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift */; };
 		D8683B081ECC4B030030E62E /* UIView+InnoToastMessageUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8683B071ECC4B030030E62E /* UIView+InnoToastMessageUI.swift */; };
 		D87812091ED3FD3C0099A9FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87812081ED3FD3C0099A9FD /* HomeViewController.swift */; };
+		D878120B1ED4344D0099A9FD /* Inno.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D878120A1ED4344D0099A9FD /* Inno.xcassets */; };
 		D8AE18F61ED2DE4D00DF2D21 /* ImageShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE18F51ED2DE4D00DF2D21 /* ImageShapesViewController.swift */; };
-		D8AE19011ED2E17800DF2D21 /* Inno.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AE19001ED2E17800DF2D21 /* Inno.xcassets */; };
-		D8AE19041ED2E6A600DF2D21 /* Inno.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AE19001ED2E17800DF2D21 /* Inno.xcassets */; };
 		D8AE19061ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE19051ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift */; };
 		D8AE19081ED311A900DF2D21 /* UIImage+InnoSquareImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE19071ED311A900DF2D21 /* UIImage+InnoSquareImg.swift */; };
 /* End PBXBuildFile section */
@@ -77,8 +76,8 @@
 		D865B76D1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoRangeSelectionSlider.swift; sourceTree = "<group>"; };
 		D8683B071ECC4B030030E62E /* UIView+InnoToastMessageUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+InnoToastMessageUI.swift"; sourceTree = "<group>"; };
 		D87812081ED3FD3C0099A9FD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D878120A1ED4344D0099A9FD /* Inno.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inno.xcassets; sourceTree = "<group>"; };
 		D8AE18F51ED2DE4D00DF2D21 /* ImageShapesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageShapesViewController.swift; sourceTree = "<group>"; };
-		D8AE19001ED2E17800DF2D21 /* Inno.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inno.xcassets; sourceTree = "<group>"; };
 		D8AE19051ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+InnoCircularImage.swift"; sourceTree = "<group>"; };
 		D8AE19071ED311A900DF2D21 /* UIImage+InnoSquareImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+InnoSquareImg.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +140,7 @@
 		D85CA41E1EC1920600F6942E /* InnoUI */ = {
 			isa = PBXGroup;
 			children = (
-				D8AE18F21ED2C38E00DF2D21 /* Resources */,
+				D878120A1ED4344D0099A9FD /* Inno.xcassets */,
 				D85CA41F1EC1920600F6942E /* InnoUI.h */,
 				D85CA4201EC1920600F6942E /* Info.plist */,
 				D85CA42A1EC1922B00F6942E /* InnoButton.swift */,
@@ -162,14 +161,6 @@
 				D8683B071ECC4B030030E62E /* UIView+InnoToastMessageUI.swift */,
 			);
 			path = ToastMessageUI;
-			sourceTree = "<group>";
-		};
-		D8AE18F21ED2C38E00DF2D21 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D8AE19001ED2E17800DF2D21 /* Inno.xcassets */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D85CA4111EC191E800F6942E /* LaunchScreen.storyboard in Resources */,
-				D8AE19041ED2E6A600DF2D21 /* Inno.xcassets in Resources */,
 				D85CA40E1EC191E800F6942E /* Assets.xcassets in Resources */,
 				D85CA40C1EC191E800F6942E /* Main.storyboard in Resources */,
 			);
@@ -280,7 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8AE19011ED2E17800DF2D21 /* Inno.xcassets in Resources */,
+				D878120B1ED4344D0099A9FD /* Inno.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

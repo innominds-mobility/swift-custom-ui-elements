@@ -125,6 +125,30 @@ currentWindow!.makeToast(message:
 "Progress value is \(progressValTextFld.text!)"
 )
 ```
+### UIImage with circular and squared
+#### Description
+`UIImageView+InnoCircularImage` is an extension of UIImageView. With this extension you can make a UIImageView as circular. 
+NOTE: The UIImageView width should be equal to UIImageView height. 
+`UIImage+InnoSquareImg` is an extension of UIImage. With this you can draw an image as square shape irrespective of actaul image size. 
+NOTE: To check the image as square, 'Content Mode' of UIImageView should be 'Aspect Fit'.
+#### Usage
+##### Circular
+Create an IBOutlet for UIImageView. Call the extension method 'cropImageCircular' on that UIImageView.
+```swift
+@IBOutlet weak var circularImage: UIImageView!
+// In viewDidLoad() 
+circularImage.cropImageCircular()
+```
+##### Squared
+Create an IBOutlet for UIImageView. Call the extension method 'cropImageSquared' to get square image on UIImage. Then give this image as the UIImage for UIImageView. 
+```swift
+@IBOutlet weak var squareImge: UIImageView!
+// In viewDidLoad()
+let profilImg = UIImage(named: "profileImg")
+let sqrImg = profilImg?.cropImageSquared()
+squareImge.image = sqrImg   
+```
+
 
 
 
