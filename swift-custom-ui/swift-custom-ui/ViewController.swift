@@ -118,6 +118,9 @@ class ViewController: UIViewController {
             }
         }
     }
+    /// It triggers ImageShapes VC
+    ///
+    /// - Parameter sender: The button that invokes this IBAction method.
     @IBAction func goToImageShapes(_ sender: Any) {
         if let imageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
             "ImageShapesViewController") as? ImageShapesViewController {

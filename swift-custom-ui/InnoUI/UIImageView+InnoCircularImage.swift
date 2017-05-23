@@ -8,7 +8,9 @@
 
 import Foundation
 
+// MARK: - Image in circle UIImageView extension
 public extension UIImageView {
+    /// Crop image to circle
     public func cropImageCircular() {
         self.layer.cornerRadius = bounds.height / 2
         self.layer.masksToBounds = false
