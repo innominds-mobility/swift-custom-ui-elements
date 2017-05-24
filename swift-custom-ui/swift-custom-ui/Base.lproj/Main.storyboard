@@ -434,6 +434,37 @@
             </objects>
             <point key="canvasLocation" x="527" y="-34"/>
         </scene>
+        <!--Buttons View Controller-->
+        <scene sceneID="sQA-98-4O4">
+            <objects>
+                <viewController storyboardIdentifier="ButtonsViewController" id="SBm-9n-REb" customClass="ButtonsViewController" customModule="swift_custom_ui" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z8A-SR-tpS"/>
+                        <viewControllerLayoutGuide type="bottom" id="JjK-eV-JTE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j0v-uM-3Lu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-WC-K5n">
+                                <rect key="frame" x="39" y="196" width="296" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.46127232140000002" green="0.57511160709999998" blue="0.1341517857" alpha="0.85329555459999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" red="1" green="0.20887276790000001" blue="0.1341517857" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="designButton" destination="gvI-WC-K5n" id="yFd-NI-91t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Oh-3j-L4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448.80000000000001" y="650.82458770614699"/>
+        </scene>
     </scenes>
     <resources>
         <image name="profileImg" width="300" height="225"/>

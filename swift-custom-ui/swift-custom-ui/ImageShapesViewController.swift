@@ -9,7 +9,8 @@
 import UIKit
 import InnoUI
 
-/// The purpose of this view controller is to provide a user interface for UIImageView as circular and UIImage as Square.
+/// The purpose of this view controller is to provide a user interface 
+/// for UIImageView as circular and UIImage as Square.
 /// Go to Interface Builder for details.
 /// The `ImageShapesViewController` class is a subclass of the `UIViewController`.
 class ImageShapesViewController: UIViewController {

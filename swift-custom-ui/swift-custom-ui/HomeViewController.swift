@@ -20,7 +20,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let elementsList: [String] = ["Rounded and corner type button", "Progress view circle & bar",
             "Range selection slider", "Toast message UI", "Custom collection views",
             "UIImage with circular and squared",
-            "Radiant background", "Bottom border Textfield"]
+            "Radiant background", "Bottom border Textfield", "Transparent Button"]
     /// cell reuse id (cells that scroll out of view can be reused)
     let cellReUseIdentifier = "cell"
     override func viewDidLoad() {
@@ -70,8 +70,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
-        case 0:
-            if let buttonVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+        case 0: if let buttonVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "ProgressViewController") as? ProgressViewController {
                 if let navigator = navigationController {
                     navigator.pushViewController(buttonVC, animated: true)
@@ -97,17 +96,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 }
             }
 
-        case 4:
-            break
-        case 5:
-            if let imageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+        case 4: break
+        case 5: if let imageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "ImageShapesViewController") as? ImageShapesViewController {
                 if let navigator = navigationController {
                     navigator.pushViewController(imageVC, animated: true)
                 }
             }
-        case 6:
-            if let radiantVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+        case 6: if let radiantVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "RadiantBackgroundViewController") as? RadiantBackgroundViewController {
                 if let navigator = navigationController {
                     navigator.pushViewController(radiantVC, animated: true)
@@ -120,7 +116,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     navigator.pushViewController(customTxtFldVC, animated: true)
                 }
             }
-
+        case 8: if let customButnVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+                "ButtonsViewController") as? ButtonsViewController {
+                if let navigator = navigationController {
+                    navigator.pushViewController(customButnVC, animated: true)
+                }
+            }
         default:
             break
         }
