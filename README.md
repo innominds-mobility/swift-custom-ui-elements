@@ -13,6 +13,7 @@ The following components are to be developed in UI for swift
 	* Circular
 	* Spiral
 * UIImage with circular and squared
+* Radiant background view
 
 To integrate swift-custom-ui-elements into your Xcode project manually
 add InnoUI module to your project.
@@ -148,7 +149,20 @@ let profilImg = UIImage(named: "profileImg")
 let sqrImg = profilImg?.cropImageSquared()
 squareImge.image = sqrImg   
 ```
-
+### Radiant background view
+#### Description
+Radiant background view can be used to set two colors as background color for view. `InnoRadiantBackground` is a subclass of UIView. Include this file in your project to get toast message.
+![RadiantBackground_Icon](Resources/RadiantBackground.png "RadiantBackground Icon")
+#### Usage
+Add an uiview IBoutlet from IB or can do by programetically create a uiview subclassing `InnoRadiantBackground`.  
+```swift
+@IBOutlet weak var radiantView: InnoRadiantBackground!
+```
+You can change color1 and color2 values as below as per your requirements
+```swift
+radiantView.color1 = UIColor.yellow
+radiantView.color2 = UIColor.blue
+```
 
 
 
