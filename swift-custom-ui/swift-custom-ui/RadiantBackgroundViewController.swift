@@ -16,6 +16,7 @@ class RadiantBackgroundViewController: UIViewController {
     // MARK: - Default View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        radiantView.color1 = UIColor.purple
+        radiantView.color1 = UIColor.yellow
+        radiantView.color2 = UIColor.blue
     }
 }
