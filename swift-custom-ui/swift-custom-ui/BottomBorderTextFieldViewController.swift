@@ -56,6 +56,7 @@ class BottomBorderTextFieldViewController: UIViewController, UITextFieldDelegate
     func customizeCustomTextField() {
         textField.placeholder = "Name"
         titleLabel.text = "Enter your full name"
+        textField.tintColor = cursorColor
         updateColors()
         updateTitleVisibility(true)
     }
