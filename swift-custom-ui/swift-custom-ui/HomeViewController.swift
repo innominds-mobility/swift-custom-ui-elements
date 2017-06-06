@@ -20,7 +20,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let elementsList: [String] = ["Rounded and corner type button", "Progress view circle & bar",
             "Range selection slider", "Toast message UI", "Custom collection views",
             "UIImage with circular and squared",
-            "Radiant background", "Bottom border Textfield", "Transparent Button"]
+            "Radiant background", "Custom Textfield", "Transparent Button"]
     /// cell reuse id (cells that scroll out of view can be reused)
     let cellReUseIdentifier = "cell"
     override func viewDidLoad() {
@@ -111,7 +111,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         case 7:
             if let customTxtFldVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
-                "BottomBorderTextFieldViewController") as? BottomBorderTextFieldViewController {
+                "CustomTextfieldViewController") as? CustomTextfieldViewController {
                 if let navigator = navigationController {
                     navigator.pushViewController(customTxtFldVC, animated: true)
                 }

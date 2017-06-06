@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A2C0E211EE67D9100D28C21 /* CustomTextfieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C0E201EE67D9100D28C21 /* CustomTextfieldViewController.swift */; };
+		9A2C0E461EE6A58400D28C21 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C0E451EE6A58400D28C21 /* CustomTextField.swift */; };
 		9A4004B61ECD70950034A3AA /* InnoRadiantBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4004B51ECD70950034A3AA /* InnoRadiantBackground.swift */; };
 		9A5F23011ECAC953006248CD /* RadiantBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5F23001ECAC953006248CD /* RadiantBackgroundViewController.swift */; };
-		9A5F23051ECB1240006248CD /* BottomBorderTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5F23041ECB1240006248CD /* BottomBorderTextFieldViewController.swift */; };
 		D82568411EC5AEB400676A0E /* RangeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */; };
 		D82D5CFA1EC2E8AF0080B5AB /* InnoProgressViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */; };
 		D85CA4071EC191E800F6942E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA4061EC191E800F6942E /* AppDelegate.swift */; };
@@ -59,9 +60,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A2C0E201EE67D9100D28C21 /* CustomTextfieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextfieldViewController.swift; sourceTree = "<group>"; };
+		9A2C0E451EE6A58400D28C21 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9A4004B51ECD70950034A3AA /* InnoRadiantBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoRadiantBackground.swift; sourceTree = "<group>"; };
 		9A5F23001ECAC953006248CD /* RadiantBackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiantBackgroundViewController.swift; sourceTree = "<group>"; };
-		9A5F23041ECB1240006248CD /* BottomBorderTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextFieldViewController.swift; sourceTree = "<group>"; };
 		D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSelectionViewController.swift; sourceTree = "<group>"; };
 		D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoProgressViewBar.swift; sourceTree = "<group>"; };
 		D85CA4031EC191E800F6942E /* swift-custom-ui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-custom-ui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,8 +134,8 @@
 				D85CA4081EC191E800F6942E /* ProgressViewController.swift */,
 				D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */,
 				9A5F23001ECAC953006248CD /* RadiantBackgroundViewController.swift */,
-				9A5F23041ECB1240006248CD /* BottomBorderTextFieldViewController.swift */,
 				D8AE18F51ED2DE4D00DF2D21 /* ImageShapesViewController.swift */,
+				9A2C0E201EE67D9100D28C21 /* CustomTextfieldViewController.swift */,
 				D878120C1ED442440099A9FD /* ButtonsViewController.swift */,
 				D85CA40A1EC191E800F6942E /* Main.storyboard */,
 				D85CA40D1EC191E800F6942E /* Assets.xcassets */,
@@ -158,6 +160,7 @@
 				D8AE19051ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift */,
 				D8AE19071ED311A900DF2D21 /* UIImage+InnoSquareImg.swift */,
 				D878120E1ED448760099A9FD /* UIButton+InnoDesignButton.swift */,
+				9A2C0E451EE6A58400D28C21 /* CustomTextField.swift */,
 			);
 			path = InnoUI;
 			sourceTree = "<group>";
@@ -306,8 +309,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8AE18F61ED2DE4D00DF2D21 /* ImageShapesViewController.swift in Sources */,
-				9A5F23051ECB1240006248CD /* BottomBorderTextFieldViewController.swift in Sources */,
 				D85CA4091EC191E800F6942E /* ProgressViewController.swift in Sources */,
+				9A2C0E211EE67D9100D28C21 /* CustomTextfieldViewController.swift in Sources */,
 				D85CA4071EC191E800F6942E /* AppDelegate.swift in Sources */,
 				D878120D1ED442440099A9FD /* ButtonsViewController.swift in Sources */,
 				9A5F23011ECAC953006248CD /* RadiantBackgroundViewController.swift in Sources */,
@@ -324,6 +327,7 @@
 				D85CA42B1EC1922B00F6942E /* InnoButton.swift in Sources */,
 				D85CA42D1EC19A6E00F6942E /* InnoProgressViewCircle.swift in Sources */,
 				D865B76E1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift in Sources */,
+				9A2C0E461EE6A58400D28C21 /* CustomTextField.swift in Sources */,
 				D8AE19081ED311A900DF2D21 /* UIImage+InnoSquareImg.swift in Sources */,
 				D8683B081ECC4B030030E62E /* UIView+InnoToastMessageUI.swift in Sources */,
 				D878120F1ED448760099A9FD /* UIButton+InnoDesignButton.swift in Sources */,
