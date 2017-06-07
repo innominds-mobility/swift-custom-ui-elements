@@ -4,10 +4,10 @@
 //
 //  Created by Aruna Kumari Yarra on 06/06/17.
 //  Copyright © 2017 Innominds Mobility. All rights reserved.
-//
 
 import UIKit
-
+/// The purpose of this class is to provide Custom textfield with title.
+/// The `CustomTextField` class is a subclass of the `UITextField`.
 @IBDesignable public class CustomTextField: UITextField {
     /*
     // Only override draw() if you perform custom drawing.
@@ -21,6 +21,7 @@ import UIKit
             self.updateTextAligment()
         }
     }
+    
     fileprivate func updateTextAligment() {
         if self.isLTRLanguage {
             self.textAlignment = .left
@@ -227,6 +228,7 @@ import UIKit
         self.lineHeight = 2.0 * onePixel
         self.selectedLineHeight = 2.0 * self.lineHeight
     }
+
     // MARK: Responder handling
     /// Attempt the control to become the first responder
     ///
