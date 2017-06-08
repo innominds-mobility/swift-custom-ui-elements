@@ -164,6 +164,16 @@ You can change color1 and color2 values as below as per your requirements
 radiantView.color1 = UIColor.yellow
 radiantView.color2 = UIColor.blue
 ```
+### Rounded buttons with transparent backgrounds.
+#### Description
+`UIButton+InnoDesignButton` is an extension of UIButton. With this extension you can make a button as rounded with transparent backgrounds. It has features like: Onhighlighting, button background color changes to the border/Text color and Text color changes to button normal background color.
+![InnoTransparentButton Icon](Resources/InnoTransparentButton.png "InnoTransparentButton Icon")
+#### Usage
+```swift
+@IBOutlet weak var designButton: UIButton!
+designButton.setUpInnoDesign()
+```
+
 
 
 
