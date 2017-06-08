@@ -81,4 +81,15 @@ class ProgressViewController: UIViewController {
             )
         }
     }
+    /// It decides show the title for progress circle or not.
+    ///
+    /// - Parameter sender: The switch that invokes this IBAction method.
+    @IBAction func switchStateChanged(_ sender: UISwitch) {
+        customProgressView.setNeedsDisplay()
+       if sender.isOn {
+        customProgressView.showTitle = true
+        } else {
+        customProgressView.showTitle = false
+        }
+    }
 }

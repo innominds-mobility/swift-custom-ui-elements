@@ -40,6 +40,10 @@ import UIKit
             self.drawProgressCircleViewLayer(progressVal:progress, strokeColor: self.progressColor)
         }
     }
+    /// IBInspectable for show title bool of InnoProgressViewCircle
+    @IBInspectable public var showTitle: Bool = false
+    /// IBInspectable for progress title of InnoProgressViewCircle
+    @IBInspectable public var progressTitle: NSString = "Progress"
     /// Performing custom drawing for progress circle.
     ///
     /// - Parameter rect: The portion of the view’s bounds that needs to be updated.
@@ -91,7 +95,6 @@ import UIKit
     ///   - progressVal: Progress value for circle.
     ///   - strokeColor: color of circle.
     func drawProgressCircleViewLayer(progressVal: CGFloat, strokeColor: UIColor) {
-
         progressCircleLayer.removeFromSuperlayer()
         /// Center point of arc.
         let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
@@ -105,10 +108,8 @@ import UIKit
         let endAngle: CGFloat = startAngle + CGFloat(2 * 3.14 * progressVal)//π / 4
         /// Path for progress circle
         let pCirclePath = UIBezierPath(arcCenter: center,
-                                       radius: radius/2 - arcWidth/2,
-                                       startAngle: startAngle,
-                                       endAngle: endAngle,
-                                       clockwise: true)
+                                       radius: radius/2 - arcWidth/2, startAngle: startAngle,
+                                       endAngle: endAngle, clockwise: true)
         pCirclePath.lineWidth = arcWidth
         strokeColor.setStroke()
         pCirclePath.stroke()
@@ -116,7 +117,32 @@ import UIKit
         progressCircleLayer.path = pCirclePath.cgPath
         progressCircleLayer.fillColor = UIColor.clear.cgColor
         defaultCircleLayer.addSublayer(progressCircleLayer)
-
+        for subview in self.subviews { subview.removeFromSuperview() }
+        if showTitle {
+            /// Title view
+            let datailsView = UIView()
+            datailsView.frame = CGRect(x: self.bounds.origin.x+10,
+                                       y: self.bounds.height/2-30,
+                                       width: self.bounds.width-20, height: 60)
+            /// Title label
+            let nameLabel = UILabel()
+            nameLabel.font = UIFont(name: "Helvetica-Bold", size: 20)
+            nameLabel.frame = CGRect(x: 0, y: 0,
+                                     width: datailsView.frame.size.width, height: 30)
+            nameLabel.text = progressTitle as String
+            nameLabel.textAlignment = NSTextAlignment.center
+            nameLabel.textColor = strokeColor
+            datailsView.addSubview(nameLabel)
+            /// Progress value label
+            let valLabel = UILabel()
+            valLabel.font = UIFont(name: "Helvetica-Bold", size: 30)
+            valLabel.frame = CGRect(x: 5,
+                                    y: nameLabel.frame.origin.y+nameLabel.frame.size.height+5,
+                                    width: datailsView.frame.size.width-10, height: 30)
+            valLabel.text = "\(Int(progressVal*100))%"
+            valLabel.textAlignment = NSTextAlignment.center
+            valLabel.textColor = strokeColor
+            datailsView.addSubview(valLabel)
+            self.addSubview(datailsView) }
     }
-
 }
