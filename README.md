@@ -40,6 +40,8 @@ showButton.cornerRadius = 20
 * Width of circle
 * Higlighted progress color
 * Default color of circle.
+* Title for progress inside circle
+* Shows progress value inside circle 
 ![InnoProgressViewCircle Icon](Resources/InnoProgressViewCircle.png "InnoProgressViewCircle Icon")
 
 #### Usage
@@ -51,6 +53,17 @@ Progress value range is 0.0 to 1.0 cgfloat value. Here below progress value is c
 ```swift
 customProgressView.setNeedsDisplay()
 customProgressView.progress = CGFloat(Float(progressValTextFld.text!)!)/100
+```
+For customizing the progress circle title and lable, can do programetically or can directly hide/show from IB also. Can hide or show title & label for progress circle as shown below.
+```swift
+@IBAction func switchStateChanged(_ sender: UISwitch) {
+customProgressView.setNeedsDisplay()
+if sender.isOn {
+customProgressView.showTitle = true
+} else {
+customProgressView.showTitle = false
+}
+}
 ```
 ### Custom progress view bar
 
