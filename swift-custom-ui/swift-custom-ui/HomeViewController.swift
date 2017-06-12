@@ -20,7 +20,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let elementsList: [String] = ["Rounded and corner type button", "Progress view circle & bar",
             "Range selection slider", "Toast message UI", "Custom collection views",
             "UIImage with circular and squared",
-            "Radiant background", "Custom Textfield", "Transparent Button"]
+            "Radiant background", "Custom Textfield", "Transparent Button", "Loading Indicator"]
     /// cell reuse id (cells that scroll out of view can be reused)
     let cellReUseIdentifier = "cell"
     override func viewDidLoad() {
@@ -73,21 +73,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case 0: if let buttonVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "ProgressViewController") as? ProgressViewController {
                 if let navigator = navigationController {
-                    navigator.pushViewController(buttonVC, animated: true)
-                }
+                    navigator.pushViewController(buttonVC, animated: true) }
             }
         case 1: if let progressVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "ProgressViewController") as? ProgressViewController {
-                if let navigator = navigationController {
-                    navigator.pushViewController(progressVC, animated: true)
-                }
+                if let navigator = navigationController { navigator.pushViewController(progressVC, animated: true) }
             }
-
         case 2: if let rangeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "RangeSelectionViewController") as? RangeSelectionViewController {
-                if let navigator = navigationController {
-                    navigator.pushViewController(rangeVC, animated: true)
-                }
+                if let navigator = navigationController { navigator.pushViewController(rangeVC, animated: true) }
             }
         case 3: if let toastVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "ProgressViewController") as? ProgressViewController {
@@ -121,6 +115,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 if let navigator = navigationController {
                     navigator.pushViewController(customButnVC, animated: true)
                 }
+            }
+        case 9: if let loadingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+            "LoadingIndicatorViewController") as? LoadingIndicatorViewController {
+            if let navigator = navigationController { navigator.pushViewController(loadingVC, animated: true) }
             }
         default:
             break

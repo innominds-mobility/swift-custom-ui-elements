@@ -430,6 +430,66 @@
             </objects>
             <point key="canvasLocation" x="88.799999999999997" y="-690.40479760119945"/>
         </scene>
+        <!--Loading Indicator View Controller-->
+        <scene sceneID="wda-j3-sEK">
+            <objects>
+                <viewController storyboardIdentifier="LoadingIndicatorViewController" id="FkP-Mb-aEY" customClass="LoadingIndicatorViewController" customModule="swift_custom_ui" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YNL-zQ-SN7"/>
+                        <viewControllerLayoutGuide type="bottom" id="pgI-QO-RHY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uW1-z5-UD6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcA-NF-WQD">
+                                <rect key="frame" x="22.5" y="70" width="275" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.74106930790000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="NRZ-HE-BLp"/>
+                                    <constraint firstAttribute="width" constant="275" id="XAZ-1d-TT4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Start Loading Indicator">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopLoadingButtonAction:" destination="FkP-Mb-aEY" eventType="touchUpInside" id="u0x-XW-vAC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXe-3g-e89">
+                                <rect key="frame" x="22.5" y="149" width="275" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.49829610169999999" blue="0.256774051" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Yf9-DU-zHH"/>
+                                    <constraint firstAttribute="width" constant="275" id="Zwy-g0-fvB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Start Loading View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopLoadingViewAction:" destination="FkP-Mb-aEY" eventType="touchUpInside" id="2VK-qe-SYt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pXe-3g-e89" firstAttribute="top" secondItem="mcA-NF-WQD" secondAttribute="bottom" constant="34" id="4vO-E2-vv8"/>
+                            <constraint firstItem="pXe-3g-e89" firstAttribute="centerX" secondItem="uW1-z5-UD6" secondAttribute="centerX" id="DDc-4d-Gxu"/>
+                            <constraint firstItem="mcA-NF-WQD" firstAttribute="centerX" secondItem="uW1-z5-UD6" secondAttribute="centerX" id="TTj-AB-dmY"/>
+                            <constraint firstItem="mcA-NF-WQD" firstAttribute="top" secondItem="YNL-zQ-SN7" secondAttribute="bottom" constant="50" id="stK-2o-VkC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadViewButton" destination="pXe-3g-e89" id="DPL-mJ-Qnb"/>
+                        <outlet property="startButtn" destination="mcA-NF-WQD" id="RUg-qu-1yw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aNK-Gb-O4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.625" y="-1459.8591549295775"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="nxU-ET-7wq">
             <objects>
