@@ -86,22 +86,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case 3: if let toastVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "ProgressViewController") as? ProgressViewController {
                 if let navigator = navigationController {
-                    navigator.pushViewController(toastVC, animated: true)
-                }
+                    navigator.pushViewController(toastVC, animated: true) }
             }
 
         case 4: break
         case 5: if let imageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "ImageShapesViewController") as? ImageShapesViewController {
-                if let navigator = navigationController {
-                    navigator.pushViewController(imageVC, animated: true)
-                }
+                if let navigator = navigationController { navigator.pushViewController(imageVC, animated: true) }
             }
         case 6: if let radiantVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "RadiantBackgroundViewController") as? RadiantBackgroundViewController {
                 if let navigator = navigationController {
-                    navigator.pushViewController(radiantVC, animated: true)
-                }
+                    navigator.pushViewController(radiantVC, animated: true) }
             }
         case 7:
             if let customTxtFldVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
@@ -113,8 +109,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case 8: if let customButnVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "ButtonsViewController") as? ButtonsViewController {
                 if let navigator = navigationController {
-                    navigator.pushViewController(customButnVC, animated: true)
-                }
+                    navigator.pushViewController(customButnVC, animated: true) }
             }
         case 9: if let loadingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
             "LoadingIndicatorViewController") as? LoadingIndicatorViewController {

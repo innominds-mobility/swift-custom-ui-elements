@@ -44,7 +44,7 @@ class LoadingIndicatorViewController: UIViewController {
         if isStartView {
             isStartView = false
             loadViewButton.setTitle("Stop LoadingView", for: .normal)
-             self.startLoadingView(loadTitle: "Hello loading...")
+             self.startLoadingView(loadTitle: "Hello loading..")
         } else {
             isStartView = true
             loadViewButton.setTitle("Start LoadingView", for: .normal)
