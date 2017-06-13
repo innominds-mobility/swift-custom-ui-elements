@@ -14,6 +14,7 @@ The following components are to be developed in UI for swift
 	* Spiral
 * UIImage with circular and squared
 * Radiant background view
+* Loading indicator as an extension to the viewController
 
 To integrate swift-custom-ui-elements into your Xcode project manually
 add InnoUI module to your project.
@@ -186,7 +187,31 @@ radiantView.color2 = UIColor.blue
 @IBOutlet weak var designButton: UIButton!
 designButton.setUpInnoDesign()
 ```
-
+### Loading indicator as an extension to the viewController
+#### Description
+`UIViewController+InnoLoadingIndicator` is an extension of UIViewController. With this extension you can directly call start and stop of loading indicator as per requirement. Features are:
+* Simple loading indicator.
+* Loading indicator with customizable title for it.
+#### Usage
+* Simple Loading Indicator
+Starting/animating simple loading as shown below. Can customize UIActivityIndicatorViewStyle and location of loading indicator on screen.
+```swift
+self.startLoadingIndicator(style: UIActivityIndicatorViewStyle.gray, location:view.center)
+```
+Stop simple loading as shown below.
+```swift
+self.stopLoadingIndicator()
+```
+* Loading indicator with customizable title
+Starting/animating loading indicator view as below. Customize title for it(optional). 
+```swift
+self.startLoadingView(loadTitle: "Hello loading..")
+```
+Stop Loading indicator view.
+```swift
+self.stopLoadingView()
+```
+NOTE: For using this indicator as an extension to your viewcontroller, make sure that no other subviews in your viewcontroller should not have an tag value as 999990 and 999991.
 
 
 
