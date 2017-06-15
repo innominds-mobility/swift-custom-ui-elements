@@ -191,7 +191,9 @@ designButton.setUpInnoDesign()
 #### Description
 `UIViewController+InnoLoadingIndicator` is an extension of UIViewController. With this extension you can directly call start and stop of loading indicator as per requirement. Features are:
 * Simple loading indicator.
+![LoadingIndicator_Icon](Resources/LoadingIndicator.png "LoadingIndicator Icon")
 * Loading indicator with customizable title for it.
+![LoadingView_Icon](Resources/LoadingView.png "LoadingView Icon")
 #### Usage
 * Simple Loading Indicator
 Starting/animating simple loading as shown below. Can customize UIActivityIndicatorViewStyle and location of loading indicator on screen.
