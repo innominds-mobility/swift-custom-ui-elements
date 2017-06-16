@@ -32,6 +32,8 @@
 		D878120B1ED4344D0099A9FD /* Inno.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D878120A1ED4344D0099A9FD /* Inno.xcassets */; };
 		D878120D1ED442440099A9FD /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878120C1ED442440099A9FD /* ButtonsViewController.swift */; };
 		D878120F1ED448760099A9FD /* UIButton+InnoDesignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878120E1ED448760099A9FD /* UIButton+InnoDesignButton.swift */; };
+		D89BDB471EF3A286006B3ADB /* CustomLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89BDB461EF3A286006B3ADB /* CustomLoadingIndicator.swift */; };
+		D89BDB491EF3B9FB006B3ADB /* CustomLoadingIndicatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89BDB481EF3B9FB006B3ADB /* CustomLoadingIndicatorVC.swift */; };
 		D8AE18F61ED2DE4D00DF2D21 /* ImageShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE18F51ED2DE4D00DF2D21 /* ImageShapesViewController.swift */; };
 		D8AE19061ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE19051ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift */; };
 		D8AE19081ED311A900DF2D21 /* UIImage+InnoSquareImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE19071ED311A900DF2D21 /* UIImage+InnoSquareImg.swift */; };
@@ -88,6 +90,8 @@
 		D878120A1ED4344D0099A9FD /* Inno.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inno.xcassets; sourceTree = "<group>"; };
 		D878120C1ED442440099A9FD /* ButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		D878120E1ED448760099A9FD /* UIButton+InnoDesignButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+InnoDesignButton.swift"; sourceTree = "<group>"; };
+		D89BDB461EF3A286006B3ADB /* CustomLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoadingIndicator.swift; sourceTree = "<group>"; };
+		D89BDB481EF3B9FB006B3ADB /* CustomLoadingIndicatorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoadingIndicatorVC.swift; sourceTree = "<group>"; };
 		D8AE18F51ED2DE4D00DF2D21 /* ImageShapesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageShapesViewController.swift; sourceTree = "<group>"; };
 		D8AE19051ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+InnoCircularImage.swift"; sourceTree = "<group>"; };
 		D8AE19071ED311A900DF2D21 /* UIImage+InnoSquareImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+InnoSquareImg.swift"; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				D85CA40D1EC191E800F6942E /* Assets.xcassets */,
 				D85CA40F1EC191E800F6942E /* LaunchScreen.storyboard */,
 				D85CA4121EC191E800F6942E /* Info.plist */,
+				D89BDB481EF3B9FB006B3ADB /* CustomLoadingIndicatorVC.swift */,
 			);
 			path = "swift-custom-ui";
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				D878120E1ED448760099A9FD /* UIButton+InnoDesignButton.swift */,
 				9A2C0E451EE6A58400D28C21 /* CustomTextField.swift */,
 				D87190221EEA6F5D00CABA81 /* UIViewController+InnoLoadingIndicator.swift */,
+				D89BDB461EF3A286006B3ADB /* CustomLoadingIndicator.swift */,
 			);
 			path = InnoUI;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				D878120D1ED442440099A9FD /* ButtonsViewController.swift in Sources */,
 				9A5F23011ECAC953006248CD /* RadiantBackgroundViewController.swift in Sources */,
 				D87812091ED3FD3C0099A9FD /* HomeViewController.swift in Sources */,
+				D89BDB491EF3B9FB006B3ADB /* CustomLoadingIndicatorVC.swift in Sources */,
 				D82568411EC5AEB400676A0E /* RangeSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +346,7 @@
 				D8AE19081ED311A900DF2D21 /* UIImage+InnoSquareImg.swift in Sources */,
 				D8683B081ECC4B030030E62E /* UIView+InnoToastMessageUI.swift in Sources */,
 				D878120F1ED448760099A9FD /* UIButton+InnoDesignButton.swift in Sources */,
+				D89BDB471EF3A286006B3ADB /* CustomLoadingIndicator.swift in Sources */,
 				9A4004B61ECD70950034A3AA /* InnoRadiantBackground.swift in Sources */,
 				D8AE19061ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift in Sources */,
 			);

@@ -20,7 +20,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let elementsList: [String] = ["Rounded and corner type button", "Progress view circle & bar",
             "Range selection slider", "Toast message UI", "Custom collection views",
             "UIImage with circular and squared",
-            "Radiant background", "Custom Textfield", "Transparent Button", "Loading Indicator"]
+            "Radiant background", "Custom Textfield", "Transparent Button", "Loading Indicator",
+            "Custom Loading Indicator"]
     /// cell reuse id (cells that scroll out of view can be reused)
     let cellReUseIdentifier = "cell"
     override func viewDidLoad() {
@@ -88,7 +89,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 if let navigator = navigationController {
                     navigator.pushViewController(toastVC, animated: true) }
             }
-
         case 4: break
         case 5: if let imageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "ImageShapesViewController") as? ImageShapesViewController {
@@ -103,8 +103,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let customTxtFldVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "CustomTextfieldViewController") as? CustomTextfieldViewController {
                 if let navigator = navigationController {
-                    navigator.pushViewController(customTxtFldVC, animated: true)
-                }
+                    navigator.pushViewController(customTxtFldVC, animated: true) }
             }
         case 8: if let customButnVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "ButtonsViewController") as? ButtonsViewController {
@@ -115,8 +114,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             "LoadingIndicatorViewController") as? LoadingIndicatorViewController {
             if let navigator = navigationController { navigator.pushViewController(loadingVC, animated: true) }
             }
+        case 10:self.customeLoadViewController()
         default:
             break
+        }
+    }
+    func customeLoadViewController() {
+        if let custLoadVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+            "CustomLoadingIndicatorVC") as? CustomLoadingIndicatorVC {
+            if let navigator = navigationController { navigator.pushViewController(custLoadVC, animated: true) }
         }
     }
 
