@@ -541,7 +541,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-WC-K5n">
-                                <rect key="frame" x="62" y="193" width="250" height="50"/>
+                                <rect key="frame" x="62.5" y="193" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.53201347589492798" green="0.63101142644882202" blue="0.17562970519065857" alpha="0.85329555459999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6EV-ih-jXd"/>
@@ -695,10 +695,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGr-Mv-Mgi">
-                                <rect key="frame" x="59" y="78" width="110" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGr-Mv-Mgi">
+                                <rect key="frame" x="59" y="77" width="110" height="110"/>
                                 <color key="backgroundColor" red="1" green="0.52630022089999995" blue="0.53183548550000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="5Za-RT-OJS"/>
+                                    <constraint firstAttribute="width" constant="110" id="uGO-Lf-xqa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
                                 <state key="normal" title="Start Loading">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -707,10 +710,13 @@
                                     <action selector="firstButtonAction:" destination="KeD-KA-hfj" eventType="touchUpInside" id="rZl-QT-EdN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUt-cE-kdG">
-                                <rect key="frame" x="205" y="78" width="110" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUt-cE-kdG">
+                                <rect key="frame" x="205" y="77" width="110" height="110"/>
                                 <color key="backgroundColor" red="0.0" green="0.74106930790000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="4Fz-gc-1cs"/>
+                                    <constraint firstAttribute="height" constant="110" id="bL5-75-SiX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
                                 <state key="normal" title="Start Loading">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -719,8 +725,27 @@
                                     <action selector="secondButtonAction:" destination="KeD-KA-hfj" eventType="touchUpInside" id="60W-xi-gpq"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAf-kv-hPa">
+                                <rect key="frame" x="187" y="80" width="1" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.20887276790000001" blue="0.1341517857" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="Nko-NX-n81"/>
+                                    <constraint firstAttribute="height" constant="100" id="Rci-vv-Wa2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zAf-kv-hPa" firstAttribute="centerX" secondItem="PzO-cz-Koz" secondAttribute="centerX" id="Bmg-pZ-gdM"/>
+                            <constraint firstItem="zAf-kv-hPa" firstAttribute="leading" secondItem="AGr-Mv-Mgi" secondAttribute="trailing" constant="18" id="ElT-Ev-JXz"/>
+                            <constraint firstItem="AGr-Mv-Mgi" firstAttribute="top" secondItem="i3B-pK-wsl" secondAttribute="bottom" constant="57" id="Gb2-eF-179"/>
+                            <constraint firstItem="sUt-cE-kdG" firstAttribute="leading" secondItem="zAf-kv-hPa" secondAttribute="trailing" constant="17" id="PyF-ec-s6o"/>
+                            <constraint firstItem="zAf-kv-hPa" firstAttribute="top" secondItem="PzO-cz-Koz" secondAttribute="top" constant="80" id="pUg-ar-Tlh"/>
+                            <constraint firstItem="sUt-cE-kdG" firstAttribute="top" secondItem="i3B-pK-wsl" secondAttribute="bottom" constant="57" id="qf8-5A-wxz"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="firstButton" destination="AGr-Mv-Mgi" id="YDL-bQ-jPB"/>

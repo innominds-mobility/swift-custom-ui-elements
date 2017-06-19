@@ -26,14 +26,20 @@ class CustomLoadingIndicatorVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(customIndicator)
+        self.view.addSubview(secondIndi)
+        self.title = "Custom Loading Indicator"
+        firstButton.layer.cornerRadius = firstButton.frame.size.height/2
+        secondButton.layer.cornerRadius = secondButton.frame.size.height/2
+        // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         let firstPoint = CGPoint(x:firstButton.frame.origin.x+firstButton.frame.size.width/2,
                                  y:firstButton.frame.origin.y+firstButton.frame.size.height+80)
-        customIndicator.center = firstPoint//self.view.center
-        self.view.addSubview(secondIndi)
+        customIndicator.center = firstPoint
         let sPoint = CGPoint(x: secondButton.frame.origin.x+secondButton.frame.size.width/2,
                              y :secondButton.frame.origin.y+secondButton.frame.size.height+80)
         secondIndi.center = sPoint//self.view.center
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
