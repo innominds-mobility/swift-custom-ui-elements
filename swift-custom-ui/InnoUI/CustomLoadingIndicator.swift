@@ -7,9 +7,9 @@
 //
 
 import UIKit
-
+/// The purpose of this class is to provide Custom loading indicator.
+/// The `CustomLoadingIndicator` class is a subclass of the `UIView`.
 public class CustomLoadingIndicator: UIView {
-
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -17,12 +17,19 @@ public class CustomLoadingIndicator: UIView {
         // Drawing code
     }
     */
+    /// Animation layer.
     lazy fileprivate var innoAnimationLayer: CALayer = {
         return CALayer()
     }()
+    /// Bool for layer animating.
     var isLayerAnimating: Bool = false
+    /// Bool for hiding loading.
     var hidesWhenStopped: Bool = true
+    /// Init method for indictor creation.
+    ///
+    /// - Parameter innoImage: Image that invokes this method.
     public init(innoImage: UIImage) {
+        /// Frame for indicator
         let frame: CGRect = CGRect(x: 0.0, y: 0.0, width: innoImage.size.width, height: innoImage.size.height)
         super.init(frame: frame)
         innoAnimationLayer.frame = frame
@@ -39,6 +46,9 @@ public class CustomLoadingIndicator: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// Adding rotation for image layer.
+    ///
+    /// - Parameter layer: The layer that invokes this method.
     func addRotationForImageLayer(forLayer layer: CALayer) {
         let layerRotation: CABasicAnimation = CABasicAnimation(keyPath:"transform.rotation.z")
         layerRotation.fillMode = kCAFillModeForwards
@@ -50,23 +60,33 @@ public class CustomLoadingIndicator: UIView {
         layer.add(layerRotation, forKey: "rotate")
     }
     
+    /// Pause the animation for layer.
+    ///
+    /// - Parameter layer: The layer that invokes this method.
     func pauseAnimationLayer(layer: CALayer) {
+        /// Pause time
         let pausedTime = layer.convertTime(CACurrentMediaTime(), from: nil)
         layer.timeOffset = pausedTime
         layer.speed = 0.0
         isLayerAnimating = false
     }
     
+    /// Resume animation.
+    ///
+    /// - Parameter layer: The layer that invokes this method.
     func resumeAnimating(layer: CALayer) {
+        /// Pause time.
         let pausedTime: CFTimeInterval = layer.timeOffset
         layer.speed = 1.0
         layer.beginTime = 0.0
         layer.timeOffset = 0.0
+        /// Time since pause
         let timeSincePause = layer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
         layer.beginTime = timeSincePause
         isLayerAnimating = true
     }
     
+   /// Starting custom loading.
    public func startCustomLoading () {
         if isLayerAnimating {
             return
@@ -77,6 +97,7 @@ public class CustomLoadingIndicator: UIView {
         resumeAnimating(layer: innoAnimationLayer)
     }
     
+   /// Stopping custom loading.
    public func stopCustomLoading () {
         if hidesWhenStopped {
             self.isHidden = true

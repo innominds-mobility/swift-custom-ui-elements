@@ -119,6 +119,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             break
         }
     }
+    /// Method handler for cell for custom loadVC
     func customeLoadViewController() {
         if let custLoadVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
             "CustomLoadingIndicatorVC") as? CustomLoadingIndicatorVC {
