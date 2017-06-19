@@ -215,5 +215,36 @@ self.stopLoadingView()
 ```
 NOTE: For using this indicator as an extension to your viewcontroller, make sure that no other subviews in your viewcontroller should not have an tag value as 999990 and 999991.
 
+### Customization of Loaders
+#### Description
+`CustomLoadingIndicator` is a subclass of UIView, used as a custom indicator. Can customize the image for the loading indicator. Can change the image of indicator as per your requirements.
+![CustomLoadingIndicator_Icon](Resources/CustomLoadingIndicator.png "CustomLoadingIndicator Icon")
+#### Usage
+Create an object for CustomLoadingIndicator with an image to load, then add as a subview to main view.
+```swift
+/// Custom indicator object
+lazy fileprivate var customIndicator: CustomLoadingIndicator = {
+/// Image of loading indicator
+let image: UIImage = UIImage(named: "ColorSpinner")!
+return CustomLoadingIndicator(innoImage: image)
+}()
+```
+```swift
+// In viewdidload
+self.view.addSubview(customIndicator)
+
+/// CGpoint for loading indicator
+let firstPoint = CGPoint(x:firstButton.frame.origin.x+firstButton.frame.size.width/2, y:firstButton.frame.origin.y+firstButton.frame.size.height+80)
+customIndicator.center = firstPoint
+```
+To start animating custom indicator
+```swift
+customIndicator.startCustomLoading() //Starts loading
+```
+To stop animating custom indicator
+```swift
+customIndicator.stopCustomLoading() //Stops loading
+```
+
 
 
