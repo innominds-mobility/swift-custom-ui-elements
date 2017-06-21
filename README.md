@@ -245,6 +245,24 @@ To stop animating custom indicator
 ```swift
 customIndicator.stopCustomLoading() //Stops loading
 ```
-
+### Check Box
+#### Description
+`InnoCheckBoxButton` is a subclass of UIButton, used as check box.
+![InnoCheckBox_Icon](Resources/InnoCheckBox.png "InnoCheckBox Icon")
+#### Usage
+Add an UIButton IBoutlet from IB or can do by programetically create a UIButton by subclassing `InnoCheckBoxButton`.  
+```swift
+@IBOutlet weak var checkBoxButton: InnoCheckBoxButton!
+```
+Create IBAction for this button. Then `isChecked` property is used to show check box selection.
+```swift
+@IBAction func checkBoxClickAction(_ sender: Any) {
+if checkBoxButton.isChecked {
+checkBoxButton.isChecked = false
+} else {
+checkBoxButton.isChecked = true
+}
+}
+```
 
 

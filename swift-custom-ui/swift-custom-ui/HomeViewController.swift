@@ -20,7 +20,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let elementsList: [String] = ["Rounded and corner type button", "Progress view circle & bar",
             "Range selection slider", "Toast message UI", "Custom collection views",
             "UIImage with circular and squared",
-            "Radiant background", "Custom Textfield", "Transparent Button", "Loading Indicator",
+            "Radiant background", "Custom Textfield", "Button Styles", "Loading Indicator",
             "Custom Loading Indicator"]
     /// cell reuse id (cells that scroll out of view can be reused)
     let cellReUseIdentifier = "cell"

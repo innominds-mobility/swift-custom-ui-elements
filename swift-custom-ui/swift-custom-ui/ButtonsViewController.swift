@@ -32,7 +32,7 @@ class ButtonsViewController: UIViewController {
     }
     /// It triggers the check box selection.
     ///
-    /// - Parameter sender: The button that invokes this IBOutlet action.
+    /// - Parameter sender: The button that invokes this IBaction.
     @IBAction func checkBoxClickAction(_ sender: Any) {
         if checkBoxButton.isChecked {
             checkBoxButton.isChecked = false
