@@ -20,7 +20,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let elementsList: [String] = ["Rounded and corner type button", "Progress view circle & bar",
             "Range selection slider", "Toast message UI", "Custom collection views",
             "UIImage with circular and squared",
-            "Radiant background", "Custom Textfield", "Transparent Button", "Loading Indicator"]
+            "Radiant background", "Custom Textfield", "Transparent Button", "Loading Indicator", "Highletable Label"]
     /// cell reuse id (cells that scroll out of view can be reused)
     let cellReUseIdentifier = "cell"
     override func viewDidLoad() {
@@ -113,6 +113,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         case 9: if let loadingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
             "LoadingIndicatorViewController") as? LoadingIndicatorViewController {
+            if let navigator = navigationController { navigator.pushViewController(loadingVC, animated: true) }
+            }
+        case 10: if let loadingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+            "HighlightableLabelViewController") as? HighlightableLabelViewController {
             if let navigator = navigationController { navigator.pushViewController(loadingVC, animated: true) }
             }
         default:

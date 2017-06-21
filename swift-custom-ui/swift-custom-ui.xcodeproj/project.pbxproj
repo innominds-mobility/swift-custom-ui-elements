@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233FE7E91EF0EF6D00B8C621 /* HighlightableLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233FE7E81EF0EF6D00B8C621 /* HighlightableLabelViewController.swift */; };
 		9A2C0E211EE67D9100D28C21 /* CustomTextfieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C0E201EE67D9100D28C21 /* CustomTextfieldViewController.swift */; };
 		9A2C0E461EE6A58400D28C21 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C0E451EE6A58400D28C21 /* CustomTextField.swift */; };
 		9A4004B61ECD70950034A3AA /* InnoRadiantBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4004B51ECD70950034A3AA /* InnoRadiantBackground.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		233FE7E81EF0EF6D00B8C621 /* HighlightableLabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightableLabelViewController.swift; sourceTree = "<group>"; };
 		9A2C0E201EE67D9100D28C21 /* CustomTextfieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextfieldViewController.swift; sourceTree = "<group>"; };
 		9A2C0E451EE6A58400D28C21 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9A4004B51ECD70950034A3AA /* InnoRadiantBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoRadiantBackground.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				9A2C0E201EE67D9100D28C21 /* CustomTextfieldViewController.swift */,
 				D878120C1ED442440099A9FD /* ButtonsViewController.swift */,
 				D87190241EEA750200CABA81 /* LoadingIndicatorViewController.swift */,
+				233FE7E81EF0EF6D00B8C621 /* HighlightableLabelViewController.swift */,
 				D85CA40A1EC191E800F6942E /* Main.storyboard */,
 				D85CA40D1EC191E800F6942E /* Assets.xcassets */,
 				D85CA40F1EC191E800F6942E /* LaunchScreen.storyboard */,
@@ -322,6 +325,7 @@
 				D878120D1ED442440099A9FD /* ButtonsViewController.swift in Sources */,
 				9A5F23011ECAC953006248CD /* RadiantBackgroundViewController.swift in Sources */,
 				D87812091ED3FD3C0099A9FD /* HomeViewController.swift in Sources */,
+				233FE7E91EF0EF6D00B8C621 /* HighlightableLabelViewController.swift in Sources */,
 				D82568411EC5AEB400676A0E /* RangeSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
