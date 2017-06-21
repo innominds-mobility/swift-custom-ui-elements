@@ -8,6 +8,8 @@
 
 import UIKit
 
+/// The purpose of this class is to provide check box button.
+/// The `InnoCheckBoxButton` class is a subclass of the `UIButton`.
 @IBDesignable public class InnoCheckBoxButton: UIButton {
 
     /*
@@ -17,12 +19,16 @@ import UIKit
         // Drawing code
     }
     */
+   /// Bool for check box selection.
    @IBInspectable public var isChecked: Bool = false {
         didSet {
             setNeedsDisplay()
         }
     }
    
+    /// Performing custom drawing for check box.
+    ///
+    /// - Parameter rect: The portion of the view’s bounds that needs to be updated.
     override public func draw(_ rect: CGRect) {
         if isChecked == true {
             self.setBackgroundImage(UIImage(named: "checkBoxMarked"), for: UIControlState.normal)
