@@ -37,6 +37,7 @@
 		D8AE18F61ED2DE4D00DF2D21 /* ImageShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE18F51ED2DE4D00DF2D21 /* ImageShapesViewController.swift */; };
 		D8AE19061ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE19051ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift */; };
 		D8AE19081ED311A900DF2D21 /* UIImage+InnoSquareImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE19071ED311A900DF2D21 /* UIImage+InnoSquareImg.swift */; };
+		D8EFEF571EF8F8C200DAD370 /* InnoCheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EFEF561EF8F8C200DAD370 /* InnoCheckBoxButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		D8AE18F51ED2DE4D00DF2D21 /* ImageShapesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageShapesViewController.swift; sourceTree = "<group>"; };
 		D8AE19051ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+InnoCircularImage.swift"; sourceTree = "<group>"; };
 		D8AE19071ED311A900DF2D21 /* UIImage+InnoSquareImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+InnoSquareImg.swift"; sourceTree = "<group>"; };
+		D8EFEF561EF8F8C200DAD370 /* InnoCheckBoxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoCheckBoxButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				9A2C0E451EE6A58400D28C21 /* CustomTextField.swift */,
 				D87190221EEA6F5D00CABA81 /* UIViewController+InnoLoadingIndicator.swift */,
 				D89BDB461EF3A286006B3ADB /* CustomLoadingIndicator.swift */,
+				D8EFEF561EF8F8C200DAD370 /* InnoCheckBoxButton.swift */,
 			);
 			path = InnoUI;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8EFEF571EF8F8C200DAD370 /* InnoCheckBoxButton.swift in Sources */,
 				D82D5CFA1EC2E8AF0080B5AB /* InnoProgressViewBar.swift in Sources */,
 				D85CA42B1EC1922B00F6942E /* InnoButton.swift in Sources */,
 				D87190231EEA6F5D00CABA81 /* UIViewController+InnoLoadingIndicator.swift in Sources */,

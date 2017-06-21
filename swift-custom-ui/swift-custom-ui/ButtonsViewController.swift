@@ -17,15 +17,23 @@ class ButtonsViewController: UIViewController {
      // MARK: - IBOutlet properties
     /// The button for Design button(transparent)
     @IBOutlet weak var designButton: UIButton!
+    @IBOutlet weak var checkBoxButton: InnoCheckBoxButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Transparent button"
-       designButton.setUpInnoDesign()
+        self.title = "Button Styles"
+        designButton.setUpInnoDesign()
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func checkBoxClickAction(_ sender: Any) {
+        if checkBoxButton.isChecked {
+            checkBoxButton.isChecked = false
+        } else {
+            checkBoxButton.isChecked = true
+        }
     }
 }
