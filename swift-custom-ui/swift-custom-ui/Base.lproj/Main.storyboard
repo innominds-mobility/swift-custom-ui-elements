@@ -794,6 +794,45 @@
             </objects>
             <point key="canvasLocation" x="-351.19999999999999" y="679.61019490254876"/>
         </scene>
+        <!--Custom Colleciton View Controller-->
+        <scene sceneID="05f-Ny-h4T">
+            <objects>
+                <viewController storyboardIdentifier="CustomCollecitonViewController" id="IVR-45-Edk" customClass="CustomCollecitonViewController" customModule="swift_custom_ui" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KI1-16-n7H"/>
+                        <viewControllerLayoutGuide type="bottom" id="bz4-dA-zyK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qJm-qm-yDo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vyx-aE-oXt">
+                                <rect key="frame" x="0.0" y="67" width="375" height="488"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="MBc-68-boA" customClass="InnoCircularLayout" customModule="InnoUI"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellID" id="wul-4h-5y3">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="custCollectionView" destination="Vyx-aE-oXt" id="Su4-Ak-fmy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vef-8u-3SJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="619.34032983508246"/>
+        </scene>
     </scenes>
     <resources>
         <image name="profileImg" width="300" height="225"/>

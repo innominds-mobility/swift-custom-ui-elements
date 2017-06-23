@@ -13,6 +13,7 @@
 		9A5F23011ECAC953006248CD /* RadiantBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5F23001ECAC953006248CD /* RadiantBackgroundViewController.swift */; };
 		D82568411EC5AEB400676A0E /* RangeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */; };
 		D82D5CFA1EC2E8AF0080B5AB /* InnoProgressViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */; };
+		D84415931EFBBBD50042A2DB /* CustomCollecitonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84415921EFBBBD50042A2DB /* CustomCollecitonViewController.swift */; };
 		D85CA4071EC191E800F6942E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA4061EC191E800F6942E /* AppDelegate.swift */; };
 		D85CA4091EC191E800F6942E /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA4081EC191E800F6942E /* ProgressViewController.swift */; };
 		D85CA40C1EC191E800F6942E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85CA40A1EC191E800F6942E /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		D8AE18F61ED2DE4D00DF2D21 /* ImageShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE18F51ED2DE4D00DF2D21 /* ImageShapesViewController.swift */; };
 		D8AE19061ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE19051ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift */; };
 		D8AE19081ED311A900DF2D21 /* UIImage+InnoSquareImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE19071ED311A900DF2D21 /* UIImage+InnoSquareImg.swift */; };
+		D8B8DB8F1EFCEC8100647AB0 /* InnoCircularLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8DB8E1EFCEC8100647AB0 /* InnoCircularLayout.swift */; };
 		D8EFEF571EF8F8C200DAD370 /* InnoCheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EFEF561EF8F8C200DAD370 /* InnoCheckBoxButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,7 @@
 		9A5F23001ECAC953006248CD /* RadiantBackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiantBackgroundViewController.swift; sourceTree = "<group>"; };
 		D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSelectionViewController.swift; sourceTree = "<group>"; };
 		D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoProgressViewBar.swift; sourceTree = "<group>"; };
+		D84415921EFBBBD50042A2DB /* CustomCollecitonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollecitonViewController.swift; sourceTree = "<group>"; };
 		D85CA4031EC191E800F6942E /* swift-custom-ui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-custom-ui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85CA4061EC191E800F6942E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D85CA4081EC191E800F6942E /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		D8AE18F51ED2DE4D00DF2D21 /* ImageShapesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageShapesViewController.swift; sourceTree = "<group>"; };
 		D8AE19051ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+InnoCircularImage.swift"; sourceTree = "<group>"; };
 		D8AE19071ED311A900DF2D21 /* UIImage+InnoSquareImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+InnoSquareImg.swift"; sourceTree = "<group>"; };
+		D8B8DB8E1EFCEC8100647AB0 /* InnoCircularLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoCircularLayout.swift; sourceTree = "<group>"; };
 		D8EFEF561EF8F8C200DAD370 /* InnoCheckBoxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoCheckBoxButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +157,7 @@
 				D85CA40F1EC191E800F6942E /* LaunchScreen.storyboard */,
 				D85CA4121EC191E800F6942E /* Info.plist */,
 				D89BDB481EF3B9FB006B3ADB /* CustomLoadingIndicatorVC.swift */,
+				D84415921EFBBBD50042A2DB /* CustomCollecitonViewController.swift */,
 			);
 			path = "swift-custom-ui";
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				D87190221EEA6F5D00CABA81 /* UIViewController+InnoLoadingIndicator.swift */,
 				D89BDB461EF3A286006B3ADB /* CustomLoadingIndicator.swift */,
 				D8EFEF561EF8F8C200DAD370 /* InnoCheckBoxButton.swift */,
+				D8B8DB8E1EFCEC8100647AB0 /* InnoCircularLayout.swift */,
 			);
 			path = InnoUI;
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 				D87812091ED3FD3C0099A9FD /* HomeViewController.swift in Sources */,
 				D89BDB491EF3B9FB006B3ADB /* CustomLoadingIndicatorVC.swift in Sources */,
 				D82568411EC5AEB400676A0E /* RangeSelectionViewController.swift in Sources */,
+				D84415931EFBBBD50042A2DB /* CustomCollecitonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8EFEF571EF8F8C200DAD370 /* InnoCheckBoxButton.swift in Sources */,
+				D8B8DB8F1EFCEC8100647AB0 /* InnoCircularLayout.swift in Sources */,
 				D82D5CFA1EC2E8AF0080B5AB /* InnoProgressViewBar.swift in Sources */,
 				D85CA42B1EC1922B00F6942E /* InnoButton.swift in Sources */,
 				D87190231EEA6F5D00CABA81 /* UIViewController+InnoLoadingIndicator.swift in Sources */,

@@ -89,7 +89,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 if let navigator = navigationController {
                     navigator.pushViewController(toastVC, animated: true) }
             }
-        case 4: break
+        case 4: self.loadCustomeCollectionViewController()
         case 5: if let imageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
                 "ImageShapesViewController") as? ImageShapesViewController {
                 if let navigator = navigationController { navigator.pushViewController(imageVC, animated: true) }
@@ -114,15 +114,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             "LoadingIndicatorViewController") as? LoadingIndicatorViewController {
             if let navigator = navigationController { navigator.pushViewController(loadingVC, animated: true) }
             }
-        case 10:self.customeLoadViewController()
+        case 10:self.customLoadViewController()
         default:
             break
         }
     }
     /// Method handler for cell for custom loadVC
-    func customeLoadViewController() {
+    func customLoadViewController() {
         if let custLoadVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
             "CustomLoadingIndicatorVC") as? CustomLoadingIndicatorVC {
+            if let navigator = navigationController { navigator.pushViewController(custLoadVC, animated: true) }
+        }
+    }
+    /// Method handler for CustomCollecitonViewController
+    func loadCustomeCollectionViewController() {
+        if let custLoadVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
+            "CustomCollecitonViewController") as? CustomCollecitonViewController {
             if let navigator = navigationController { navigator.pushViewController(custLoadVC, animated: true) }
         }
     }
