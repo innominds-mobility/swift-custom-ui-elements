@@ -11,7 +11,9 @@ import UIKit
 /// for showing custom collection view.
 class CustomCollecitonViewController: UIViewController, UICollectionViewDataSource {
 
+    /// Collection view IBOutlet.
     @IBOutlet weak var custCollectionView: UICollectionView!
+    /// collection view Cell identifier.
     let cellId = "CellID"
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class CustomCollecitonViewController: UIViewController, UICollectionViewDataSour
     }
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    /// Cell for collection view.
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId,
                                                   for: indexPath as IndexPath) as UICollectionViewCell
     cell.backgroundColor = UIColor.red
