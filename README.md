@@ -43,6 +43,7 @@ showButton.cornerRadius = 20
 * Default color of circle.
 * Title for progress inside circle
 * Shows progress value inside circle 
+
 ![InnoProgressViewCircle Icon](Resources/InnoProgressViewCircle.png "InnoProgressViewCircle Icon")
 
 #### Usage
@@ -75,6 +76,7 @@ customProgressView.showTitle = false
 * Higlighted progress bar color
 * Default color of bar.
 * Height and width (same as uiview)
+
 ![InnoProgressViewBar Icon](Resources/InnoProgressViewBar.png "InnoProgressViewBar Icon")
 
 #### Usage
@@ -125,6 +127,7 @@ self.selectedValLbl.text = "Selected Range: \(lowVal) to \(highVal)"
 ### Toast message UI
 #### Description
 Toast message can be used to display information for the short period of time. A toast contains message to be displayed quickly and disappears after sometime. `UIView+InnoToastMessageUI` is an extension of UIView. Include this file in your project to get toast message.
+
 ![InnoToastMessageUI Icon](Resources/InnoToastMessageUI.png "InnoToastMessageUI Icon")
 #### Usage
 To show toast message call `makeToast` on view OR window as per your requirements. 
@@ -181,6 +184,7 @@ radiantView.color2 = UIColor.blue
 ### Rounded buttons with transparent backgrounds.
 #### Description
 `UIButton+InnoDesignButton` is an extension of UIButton. With this extension you can make a button as rounded with transparent backgrounds. It has features like: Onhighlighting, button background color changes to the border/Text color and Text color changes to button normal background color.
+
 ![InnoTransparentButton Icon](Resources/InnoTransparentButton.png "InnoTransparentButton Icon")
 #### Usage
 ```swift
@@ -191,8 +195,10 @@ designButton.setUpInnoDesign()
 #### Description
 `UIViewController+InnoLoadingIndicator` is an extension of UIViewController. With this extension you can directly call start and stop of loading indicator as per requirement. Features are:
 * Simple loading indicator.
+
 ![LoadingIndicator_Icon](Resources/LoadingIndicator.png "LoadingIndicator Icon")
 * Loading indicator with customizable title for it.
+
 ![LoadingView_Icon](Resources/LoadingView.png "LoadingView Icon")
 #### Usage
 * Simple Loading Indicator
@@ -273,6 +279,7 @@ Custom collection view layouts are as follows.
 
 ![InnoCollectionVerticalLayout_Icon](Resources/InnoCollectionVerticalLayout.png "InnoCollectionVerticalLayout Icon") 
 * Circular - This is a custom layout for collection view. `InnoCircularLayout` is a subclass of `UICollectionViewLayout`.By using this layout you can get the collection view items in circular shape.
+
 ![InnoCollectionCircularLayout_Icon](Resources/InnoCollectionCircularLayout.png "InnoCollectionCircularLayout Icon") 
 * Spiral - This is a custom collection view layout. `InnoSpiralLayout` is a subclass of `UICollectionViewLayout`. By using this layout you can get spiral shape for collection view items.
 
