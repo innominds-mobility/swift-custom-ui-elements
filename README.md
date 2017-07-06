@@ -218,6 +218,7 @@ NOTE: For using this indicator as an extension to your viewcontroller, make sure
 ### Customization of Loaders
 #### Description
 `CustomLoadingIndicator` is a subclass of UIView, used as a custom indicator. Can customize the image for the loading indicator. Can change the image of indicator as per your requirements.
+
 ![CustomLoadingIndicator_Icon](Resources/CustomLoadingIndicator.png "CustomLoadingIndicator Icon")
 #### Usage
 Create an object for CustomLoadingIndicator with an image to load, then add as a subview to main view.
@@ -248,6 +249,7 @@ customIndicator.stopCustomLoading() //Stops loading
 ### Check Box
 #### Description
 `InnoCheckBoxButton` is a subclass of UIButton, used as check box.
+
 ![InnoCheckBox_Icon](Resources/InnoCheckBox.png "InnoCheckBox Icon")
 #### Usage
 Add an UIButton IBoutlet from IB or can do by programmatically create a UIButton by subclassing `InnoCheckBoxButton`.  
@@ -268,6 +270,7 @@ checkBoxButton.isChecked = true
 #### Description
 Custom collection view layouts are as follows.
 * Vertical - This layout is a default layout for UIcollectionview i.e UICollectionViewFlowLayout. It has a scrolling direction as vertical or horizontal, can adjust based on requirements.
+
 ![InnoCollectionVerticalLayout_Icon](Resources/InnoCollectionVerticalLayout.png "InnoCollectionVerticalLayout Icon") 
 * Circular - This is a custom layout for collection view. `InnoCircularLayout` is a subclass of `UICollectionViewLayout`.By using this layout you can get the collection view items in circular shape.
 ![InnoCollectionCircularLayout_Icon](Resources/InnoCollectionCircularLayout.png "InnoCollectionCircularLayout Icon") 
