@@ -38,14 +38,8 @@ class CustomCollecitonViewController: UIViewController, UICollectionViewDataSour
     /// - Parameter sender: The segment control that invokes this IBAction.
     @IBAction func segmentControlValueChanged(_ sender: Any) {
         if (sender as AnyObject).selectedSegmentIndex == 0 {
-//            custCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
-//            if let layout = custCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-//                layout.scrollDirection = .vertical
-//            }
-//            let cellSize = CGSize(width:200, height:200)
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .vertical
-//            layout.itemSize = cellSize
             custCollectionView.setCollectionViewLayout(layout, animated: false)
             custCollectionView.reloadData()
         } else if (sender as AnyObject).selectedSegmentIndex == 1 {

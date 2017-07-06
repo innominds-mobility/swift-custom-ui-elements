@@ -29,7 +29,7 @@ With `InnoButton`, you can directly give rounded corners to UIButton by subclass
 ![InnoButton Icon](Resources/InnoButton.png "InnoButton Icon")
 
 #### Usage
-Add an UIbutton IBOutlet from IB or can do programetically by subclassing `InnoButton`.    
+Add an UIbutton IBOutlet from IB or can do programmatically by subclassing `InnoButton`.    
 ```swift
 @IBOutlet weak var showButton: InnoButton! 
 showButton.cornerRadius = 20
@@ -46,7 +46,7 @@ showButton.cornerRadius = 20
 ![InnoProgressViewCircle Icon](Resources/InnoProgressViewCircle.png "InnoProgressViewCircle Icon")
 
 #### Usage
-Add an uiview IBoutlet from IB or can do by programetically create a uiview subclassing `InnoProgressViewCircle`.  
+Add an uiview IBoutlet from IB or can do by programmatically create a uiview subclassing `InnoProgressViewCircle`.  
 ```swift
 @IBOutlet weak var customProgressView: InnoProgressViewCircle!
 ```
@@ -55,7 +55,7 @@ Progress value range is 0.0 to 1.0 cgfloat value. Here below progress value is c
 customProgressView.setNeedsDisplay()
 customProgressView.progress = CGFloat(Float(progressValTextFld.text!)!)/100
 ```
-For customizing the progress circle title and lable, can do programetically or can directly hide/show from IB also. Can hide or show title & label for progress circle as shown below.
+For customizing the progress circle title and lable, can do programmatically or can directly hide/show from IB also. Can hide or show title & label for progress circle as shown below.
 ```swift
 @IBAction func switchStateChanged(_ sender: UISwitch) {
 customProgressView.setNeedsDisplay()
@@ -78,7 +78,7 @@ customProgressView.showTitle = false
 ![InnoProgressViewBar Icon](Resources/InnoProgressViewBar.png "InnoProgressViewBar Icon")
 
 #### Usage
-Using this progress bar is very simple by adding an uiview IBoutlet from IB or can do programetically create a uiview by subclassing `InnoProgressViewBar`. 
+Using this progress bar is very simple by adding an uiview IBoutlet from IB or can do programmatically create a uiview by subclassing `InnoProgressViewBar`. 
 
 ```swift
 @IBOutlet weak var progressBarView: InnoProgressViewBar!
@@ -104,7 +104,7 @@ progressBarView.progressValue = CGFloat(Float(progressValTextFld.text!)!)
 ![InnoRangeSelectionSlider Icon](Resources/InnoRangeSelectionSlider.png "InnoRangeSelectionSlider Icon")
 
 #### Usage
-Add an uiview IBoutlet from IB or can do by programetically create a uiview by subclassing `InnoRangeSelectionSlider`.  
+Add an uiview IBoutlet from IB or can do by programmatically create a uiview by subclassing `InnoRangeSelectionSlider`.  
 ```swift
 @IBOutlet weak var rangeSlider: InnoRangeSelectionSlider!
 ```
@@ -250,7 +250,7 @@ customIndicator.stopCustomLoading() //Stops loading
 `InnoCheckBoxButton` is a subclass of UIButton, used as check box.
 ![InnoCheckBox_Icon](Resources/InnoCheckBox.png "InnoCheckBox Icon")
 #### Usage
-Add an UIButton IBoutlet from IB or can do by programetically create a UIButton by subclassing `InnoCheckBoxButton`.  
+Add an UIButton IBoutlet from IB or can do by programmatically create a UIButton by subclassing `InnoCheckBoxButton`.  
 ```swift
 @IBOutlet weak var checkBoxButton: InnoCheckBoxButton!
 ```
@@ -264,5 +264,31 @@ checkBoxButton.isChecked = true
 }
 }
 ```
-
-
+### Custom collection views
+#### Description
+Custom collection view layouts are as follows.
+* Vertical - This layout is a default layout for UIcollectionview i.e UICollectionViewFlowLayout. It has a scrolling direction as vertical or horizontal, can adjust based on requirements.
+![InnoCollectionVerticalLayout_Icon](Resources/InnoCollectionVerticalLayout.png "InnoCollectionVerticalLayout Icon") 
+* Circular - This is a custom layout for collection view. `InnoCircularLayout` is a subclass of `UICollectionViewLayout`.By using this layout you can get the collection view items in circular shape.
+![InnoCollectionCircularLayout_Icon](Resources/InnoCollectionCircularLayout.png "InnoCollectionCircularLayout Icon") 
+* Spiral - This is a custom collection view layout. `InnoSpiralLayout` is a subclass of `UICollectionViewLayout`. By using this layout you can get spiral shape for collection view items.
+![InnoCollectionSpiralLayout_Icon](Resources/InnoCollectionSpiralLayout.png "InnoCollectionSpiralLayout Icon") 
+#### Usage
+Add an UICollectionview IBOutlet in xib or programmatically. To get a diffrent layout for collectionview set layouts as shown below.
+* Vertical - To get vertical scrolling layout for collection view, set layout as `UICollectionViewFlowLayout` and set scrolling direction to `Vertical`. This can be done directly in xib or programmatically as shown below.
+```swift
+let layout = UICollectionViewFlowLayout()
+layout.scrollDirection = .vertical
+custCollectionView.setCollectionViewLayout(layout, animated: false)
+custCollectionView.reloadData()
+```
+* Circular - For circular layout collection view, `InnoCircularLayout` is used. Import `InnoUI` module in viewcontroller and include `InnoCircularLayout` class in your project. 
+```swift
+custCollectionView.setCollectionViewLayout(InnoCircularLayout(), animated: false)
+custCollectionView.reloadData()
+```
+* Spiral - For spiral layout collection view, `InnoSpiralLayout` is used. Import `InnoUI` module in viewcontroller and include `InnoSpiralLayout` class in your project. 
+```swift
+custCollectionView.setCollectionViewLayout(InnoSpiralLayout(), animated: false)
+custCollectionView.reloadData()
+```
