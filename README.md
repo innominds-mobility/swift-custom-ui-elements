@@ -275,6 +275,7 @@ Custom collection view layouts are as follows.
 * Circular - This is a custom layout for collection view. `InnoCircularLayout` is a subclass of `UICollectionViewLayout`.By using this layout you can get the collection view items in circular shape.
 ![InnoCollectionCircularLayout_Icon](Resources/InnoCollectionCircularLayout.png "InnoCollectionCircularLayout Icon") 
 * Spiral - This is a custom collection view layout. `InnoSpiralLayout` is a subclass of `UICollectionViewLayout`. By using this layout you can get spiral shape for collection view items.
+
 ![InnoCollectionSpiralLayout_Icon](Resources/InnoCollectionSpiralLayout.png "InnoCollectionSpiralLayout Icon") 
 #### Usage
 Add an UICollectionview IBOutlet in xib or programmatically. To get a diffrent layout for collectionview set layouts as shown below.
