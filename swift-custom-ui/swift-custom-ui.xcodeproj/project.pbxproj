@@ -14,6 +14,7 @@
 		D82568411EC5AEB400676A0E /* RangeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */; };
 		D82D5CFA1EC2E8AF0080B5AB /* InnoProgressViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */; };
 		D84415931EFBBBD50042A2DB /* CustomCollecitonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84415921EFBBBD50042A2DB /* CustomCollecitonViewController.swift */; };
+		D856EC221F0A5327004BAFD3 /* InnoSpiralLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856EC211F0A5327004BAFD3 /* InnoSpiralLayout.swift */; };
 		D85CA4071EC191E800F6942E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA4061EC191E800F6942E /* AppDelegate.swift */; };
 		D85CA4091EC191E800F6942E /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85CA4081EC191E800F6942E /* ProgressViewController.swift */; };
 		D85CA40C1EC191E800F6942E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85CA40A1EC191E800F6942E /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		D82568401EC5AEB400676A0E /* RangeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSelectionViewController.swift; sourceTree = "<group>"; };
 		D82D5CF91EC2E8AF0080B5AB /* InnoProgressViewBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoProgressViewBar.swift; sourceTree = "<group>"; };
 		D84415921EFBBBD50042A2DB /* CustomCollecitonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollecitonViewController.swift; sourceTree = "<group>"; };
+		D856EC211F0A5327004BAFD3 /* InnoSpiralLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoSpiralLayout.swift; sourceTree = "<group>"; };
 		D85CA4031EC191E800F6942E /* swift-custom-ui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-custom-ui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85CA4061EC191E800F6942E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D85CA4081EC191E800F6942E /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				D89BDB461EF3A286006B3ADB /* CustomLoadingIndicator.swift */,
 				D8EFEF561EF8F8C200DAD370 /* InnoCheckBoxButton.swift */,
 				D8B8DB8E1EFCEC8100647AB0 /* InnoCircularLayout.swift */,
+				D856EC211F0A5327004BAFD3 /* InnoSpiralLayout.swift */,
 			);
 			path = InnoUI;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				D878120F1ED448760099A9FD /* UIButton+InnoDesignButton.swift in Sources */,
 				D89BDB471EF3A286006B3ADB /* CustomLoadingIndicator.swift in Sources */,
 				9A4004B61ECD70950034A3AA /* InnoRadiantBackground.swift in Sources */,
+				D856EC221F0A5327004BAFD3 /* InnoSpiralLayout.swift in Sources */,
 				D8AE19061ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

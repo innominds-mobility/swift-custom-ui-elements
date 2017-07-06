@@ -806,11 +806,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vyx-aE-oXt">
-                                <rect key="frame" x="0.0" y="67" width="375" height="488"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vyx-aE-oXt">
+                                <rect key="frame" x="0.0" y="122" width="375" height="510"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewLayout key="collectionViewLayout" id="MBc-68-boA" customClass="InnoCircularLayout" customModule="InnoUI"/>
+                                <collectionViewLayout key="collectionViewLayout" id="kGZ-W4-ghB" customClass="InnoCircularLayout" customModule="InnoUI"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellID" id="wul-4h-5y3">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -822,8 +821,31 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="eWx-mT-Xbc">
+                                <rect key="frame" x="62" y="80" width="250" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="GZu-sL-ifY"/>
+                                    <constraint firstAttribute="height" constant="28" id="noa-eC-ERx"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Vertical"/>
+                                    <segment title="Circular"/>
+                                    <segment title="Spiral"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlValueChanged:" destination="IVR-45-Edk" eventType="valueChanged" id="hqH-Ap-mX4"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eWx-mT-Xbc" firstAttribute="centerX" secondItem="qJm-qm-yDo" secondAttribute="centerX" id="1li-3L-zni"/>
+                            <constraint firstItem="bz4-dA-zyK" firstAttribute="top" secondItem="Vyx-aE-oXt" secondAttribute="bottom" constant="35" id="CAe-Fh-bZ4"/>
+                            <constraint firstItem="eWx-mT-Xbc" firstAttribute="top" secondItem="KI1-16-n7H" secondAttribute="bottom" constant="60" id="H41-Bq-bW3"/>
+                            <constraint firstItem="Vyx-aE-oXt" firstAttribute="top" secondItem="eWx-mT-Xbc" secondAttribute="bottom" constant="14" id="U2U-CE-ijF"/>
+                            <constraint firstItem="Vyx-aE-oXt" firstAttribute="leading" secondItem="qJm-qm-yDo" secondAttribute="leading" id="hOQ-Gs-9fO"/>
+                            <constraint firstAttribute="trailing" secondItem="Vyx-aE-oXt" secondAttribute="trailing" id="txG-xt-3QP"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="custCollectionView" destination="Vyx-aE-oXt" id="Su4-Ak-fmy"/>
