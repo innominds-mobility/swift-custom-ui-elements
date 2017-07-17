@@ -40,6 +40,7 @@
 		D8AE19061ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE19051ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift */; };
 		D8AE19081ED311A900DF2D21 /* UIImage+InnoSquareImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE19071ED311A900DF2D21 /* UIImage+InnoSquareImg.swift */; };
 		D8B8DB8F1EFCEC8100647AB0 /* InnoCircularLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8DB8E1EFCEC8100647AB0 /* InnoCircularLayout.swift */; };
+		D8C007231F1638970028328E /* InnoAnimatedRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C007221F1638970028328E /* InnoAnimatedRippleButton.swift */; };
 		D8EFEF571EF8F8C200DAD370 /* InnoCheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EFEF561EF8F8C200DAD370 /* InnoCheckBoxButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		D8AE19051ED2E6DE00DF2D21 /* UIImageView+InnoCircularImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+InnoCircularImage.swift"; sourceTree = "<group>"; };
 		D8AE19071ED311A900DF2D21 /* UIImage+InnoSquareImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+InnoSquareImg.swift"; sourceTree = "<group>"; };
 		D8B8DB8E1EFCEC8100647AB0 /* InnoCircularLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoCircularLayout.swift; sourceTree = "<group>"; };
+		D8C007221F1638970028328E /* InnoAnimatedRippleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoAnimatedRippleButton.swift; sourceTree = "<group>"; };
 		D8EFEF561EF8F8C200DAD370 /* InnoCheckBoxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnoCheckBoxButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 				D8EFEF561EF8F8C200DAD370 /* InnoCheckBoxButton.swift */,
 				D8B8DB8E1EFCEC8100647AB0 /* InnoCircularLayout.swift */,
 				D856EC211F0A5327004BAFD3 /* InnoSpiralLayout.swift */,
+				D8C007221F1638970028328E /* InnoAnimatedRippleButton.swift */,
 			);
 			path = InnoUI;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				D85CA42D1EC19A6E00F6942E /* InnoProgressViewCircle.swift in Sources */,
 				D865B76E1EC5D13D0019BDFF /* InnoRangeSelectionSlider.swift in Sources */,
 				9A2C0E461EE6A58400D28C21 /* CustomTextField.swift in Sources */,
+				D8C007231F1638970028328E /* InnoAnimatedRippleButton.swift in Sources */,
 				D8AE19081ED311A900DF2D21 /* UIImage+InnoSquareImg.swift in Sources */,
 				D8683B081ECC4B030030E62E /* UIView+InnoToastMessageUI.swift in Sources */,
 				D878120F1ED448760099A9FD /* UIButton+InnoDesignButton.swift in Sources */,

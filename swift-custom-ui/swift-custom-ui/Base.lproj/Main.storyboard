@@ -541,7 +541,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-WC-K5n">
-                                <rect key="frame" x="62.5" y="170" width="250" height="50"/>
+                                <rect key="frame" x="62.5" y="120" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.53201347589492798" green="0.63101142644882202" blue="0.17562970519065857" alpha="0.85329555459999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6EV-ih-jXd"/>
@@ -552,7 +552,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transparent Button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dww-Zh-ont">
-                                <rect key="frame" x="67" y="110" width="241" height="40"/>
+                                <rect key="frame" x="67" y="70" width="241" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="kLG-wr-JEj"/>
                                     <constraint firstAttribute="width" constant="241" id="sEZ-yN-sVF"/>
@@ -562,7 +562,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Box" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8du-F9-F1I">
-                                <rect key="frame" x="88" y="260" width="199" height="40"/>
+                                <rect key="frame" x="88" y="210" width="199" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="199" id="RGQ-gt-Ffu"/>
                                     <constraint firstAttribute="height" constant="40" id="vmM-nP-BcF"/>
@@ -572,7 +572,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mg9-Um-I3A" customClass="InnoCheckBoxButton" customModule="InnoUI">
-                                <rect key="frame" x="170" y="325" width="35" height="30"/>
+                                <rect key="frame" x="170" y="275" width="35" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="UVX-iF-HxZ"/>
                                     <constraint firstAttribute="height" constant="30" id="yCp-yt-8jr"/>
@@ -582,17 +582,42 @@
                                     <action selector="checkBoxClickAction:" destination="SBm-9n-REb" eventType="touchUpInside" id="C5L-n6-SN8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byU-Lq-chj" customClass="InnoAnimatedRippleButton" customModule="InnoUI">
+                                <rect key="frame" x="62" y="382" width="250" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.49829610169999999" blue="0.256774051" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="UgK-MT-Ctv"/>
+                                    <constraint firstAttribute="height" constant="50" id="bkn-MH-ArS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Ripple Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleBackgroundColor">
+                                        <color key="value" red="1" green="0.49829610169999999" blue="0.256774051" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleColor">
+                                        <color key="value" red="0.67450980390000004" green="0.94117647059999998" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rippleOverBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="trackTouchLocation" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadowRippleEnable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dww-Zh-ont" firstAttribute="top" secondItem="z8A-SR-tpS" secondAttribute="bottom" constant="90" id="89P-ho-lsc"/>
+                            <constraint firstItem="byU-Lq-chj" firstAttribute="top" secondItem="mg9-Um-I3A" secondAttribute="bottom" constant="77" id="39Y-R2-12m"/>
+                            <constraint firstItem="dww-Zh-ont" firstAttribute="top" secondItem="z8A-SR-tpS" secondAttribute="bottom" constant="50" id="89P-ho-lsc"/>
                             <constraint firstItem="dww-Zh-ont" firstAttribute="centerX" secondItem="j0v-uM-3Lu" secondAttribute="centerX" id="8mm-Zu-WMr"/>
                             <constraint firstItem="mg9-Um-I3A" firstAttribute="centerX" secondItem="j0v-uM-3Lu" secondAttribute="centerX" id="DGb-Zt-bXS"/>
-                            <constraint firstItem="gvI-WC-K5n" firstAttribute="top" secondItem="z8A-SR-tpS" secondAttribute="bottom" constant="150" id="FlL-zm-PkO"/>
+                            <constraint firstItem="gvI-WC-K5n" firstAttribute="top" secondItem="z8A-SR-tpS" secondAttribute="bottom" constant="100" id="FlL-zm-PkO"/>
                             <constraint firstItem="gvI-WC-K5n" firstAttribute="centerX" secondItem="j0v-uM-3Lu" secondAttribute="centerX" id="JUv-lZ-zmU"/>
                             <constraint firstItem="8du-F9-F1I" firstAttribute="top" secondItem="gvI-WC-K5n" secondAttribute="bottom" constant="40" id="Lam-DA-bWV"/>
                             <constraint firstItem="8du-F9-F1I" firstAttribute="centerX" secondItem="j0v-uM-3Lu" secondAttribute="centerX" id="bOy-cB-wbJ"/>
                             <constraint firstItem="mg9-Um-I3A" firstAttribute="top" secondItem="8du-F9-F1I" secondAttribute="bottom" constant="25" id="gd0-uC-5bI"/>
+                            <constraint firstItem="byU-Lq-chj" firstAttribute="centerX" secondItem="j0v-uM-3Lu" secondAttribute="centerX" id="toX-30-Ezv"/>
                         </constraints>
                     </view>
                     <connections>
