@@ -135,9 +135,9 @@ import UIKit
     }
     /// A Boolean value that determines whether the textfield is being edited or is selected.
     open var editingOrSelected: Bool {
-        get {
+//        get {
             return super.isEditing || self.isSelected
-        }
+//        }
     }
     /// The text content of the textfield
     @IBInspectable override open var text: String? {

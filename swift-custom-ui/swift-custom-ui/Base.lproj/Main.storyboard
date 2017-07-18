@@ -603,6 +603,9 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rippleOverBounds" value="NO"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="trackTouchLocation" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadowRippleEnable" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="ripplesBackgroundColor">
+                                        <color key="value" red="1" green="0.49829610169999999" blue="0.256774051" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
